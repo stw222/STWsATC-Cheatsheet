@@ -122,6 +122,18 @@
 	<p><b>.</b>cruzl &lt;lower alt&gt; &lt;higher alt&gt; - (below FL) send a msg to someone about wrong altitude for direction of flight with 2 suggestions</p>
 	<p><b>.</b>rte - Cleared to $arr, via $route. Rest of clearance remains unchanged.</p>
 	<h5 id="Alias_VFR">VFR</h5>
+	<p><b>.</b>norte &lt;cardinal direction&gt; - VFR to the (direction), departure freq unicom, squawk $squawk</p>
+	<p><b>.</b>vfrclr &lt;cardinal direction&gt; &lt;frequency using identifier (ex: 2W)&gt; - VFR to the (direction) approved, Maintain VFR at/below $temp, frequency $freq($2) squawk $squawk</p>
+	<p><b>.</b>vfrpat &lt;runway&gt;- remain in the pattern, expect Runway $uc($1), squawk $squawk</p>
+	<p><b>.</b>rb - Readback correct.</p>
+	<p><b>.</b>rbc &lt;runway&gt; - Readback correct, runway $uc($1), push and start pilot's discretion, advise ready to taxi, altimeter $altim($dep)</p>
+	<p><b>.</b>rbca &lt;runway&gt; &lt;taxiway&gt;- Readback correct, expect runway $uc($1), push start pilot's discretion, call for taxi holding short taxiway $uc($2), altimeter $altim($dep)</p>
+	<p><b>.</b>rbcatis &lt;runway&gt; &lt;taxiway&gt; - Readback correct, ATIS info $atiscode current, expect runway $uc($1), push start pilot's discretion, call for taxi holding short taxiway $uc($2).</p>
+	<p><b>.</b>rbcatisdel &lt;runway&gt; &lt;frequency using identifier (ex: 2W)&gt; - Readback correct, ATIS info $atiscode current, expect runway $1, push start pilot's discretion, contact $radioname($2) on $freq($2)</p>
+	<p><b>.</b>callgnd &lt;taxiway&gt; - Readback correct, push start pilot's discretion, call this freq short of taxiway $uc($1) when ready to taxi, altimeter $altim($dep)<p/>
+	<p><b>.</b>calldel &lt;frequency using identifier (ex: 2W)&gt; &lt;taxiway&gt; - Readback correct, push start pilot's discretion, contact $radioname($1) on $freq($1) short taxiway $uc($2) when ready taxi, altimeter $altim($dep)</p>
+	<p><b>.</b>advise -  Advise ready to taxi.</p>
+	<p><b>.</b>push - Push start pilot's discretion</p>
 	
 	<h5 id="Alias_IFRNO">IFR - No Radar</h5>
 	
