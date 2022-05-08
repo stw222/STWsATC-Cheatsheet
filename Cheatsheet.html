@@ -19,6 +19,15 @@
 		<ul>
 			<li><a href="#bad_cruize">Bad Cruize</a></li>
 			<li><a href="#PDC">PDC</a></li>
+			<li><a href="#Alias">Alias commands for Txt pilots</a></li>
+			<ul>
+				<li><a href="#Alias_cDEL">Clearance Delivery Aliases</a></li>
+				<ul>
+					<li><a href="#Alias_VFR">VFR Aliases</a></li>
+					<li><a href="#Alias_IFRNO">IFR - No Radar</a></li>
+					<li><a href="#Alias_IFR">IFR - with Radar</a></li>
+				</ul>
+			</ul>
 		</ul>
 		<li><a href="#other" style="font-size: 120%">Other</a></li>
 		<ul>
@@ -30,6 +39,9 @@
 		</ul>
 	</ul>
 
+	
+	
+	
 	<h2 id="controls">Controls</h2>
 <p>CTRL + click on an aircraft to get aircraft flight plan</p>
 <p>CTRL + ALT + click aircraft | Draw aircraft's filed route on scope</p>
@@ -60,6 +72,9 @@
 
 	<br>
 	<a href="#toc" style="font-size: 120%">Table of Contents</a>
+	
+	
+	
 
 	<h2 id="commands">Commands</h2>
 <p><b>.</b>wx or .metar &lt;ICAO&gt;</p>
@@ -68,8 +83,8 @@
 <p><b>.</b>chat nobody - to test commands</p>
 		
 	<br>
-	<p id="bad_cruize"><b>.</b>cruzh 390 410 - (In FL) send a msg to someone about wrong altitude for direction of flight with 2 suggestions</p>
-	<p><b>.</b>cruzl 110 130 - (below FL) send a msg to someone about wrong altitude for direction of flight with 2 suggestions</p>
+	<p id="bad_cruize"><b>.</b>cruzh &lt;lower alt&gt; &lt;higher alt&gt; - (In FL) send a msg to someone about wrong altitude for direction of flight with 2 suggestions</p>
+	<p><b>.</b>cruzl &lt;lower alt&gt; &lt;higher alt&gt; - (below FL) send a msg to someone about wrong altitude for direction of flight with 2 suggestions</p>
 	
 	<br>
 <h4 id="PDC">=== PRE-DEPARTURE CLEARANCES (PDCs) ===</h4>
@@ -96,9 +111,22 @@
 	
 	<br>
 <p><b>.</b>log FILENAME</p>
+	
+	<br>
+	<h3 id="Alias">Alias Commands for Text pilots</h3>
+	<h4 id="Alias_cDEL">Clearance Delivery Alias commands</h4>
+	<h5 id="Alias_VFR">VFR</h5>
+	
+	<h5 id="Alias_IFRNO">IFR - No Radar</h5>
+	
+	<h5 id-"Alias_IFR">IFR - With Radar</h5>
+	
 
 	<br>
 	<a href="#toc" style="font-size: 120%">Table of Contents</a>
+	
+	
+	
 
 	<h2 id="other">Other</h2>
 <p id="VFR">Maintain VFR at or below &lt;alt&gt;, departure on &lt;freq&gt;, squak &lt;code&gt;</p>
