@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Stew's ATC cheats</title>
+	<!-- <link rel="stylesheet" href="styles.css"> -->
+	<style>
+		body {padding: 10px;}
+		p {font-size: 110%; padding: 0; margin: 0;}
+		a {padding-top: 10px; padding-bottom: 10px; margin-top: 10px; margin-botton: 10px;}
+	</style>
+</head>
+
+<body>
+	<h1 id="toc"> Table of Contents </h1>
+	<ul>
+		<li><a href="#controls" style="font-size: 120%">Controls</a></li>
+		<li><a href="#commands" style="font-size: 120%">Commands</a></li>
+		<ul>
+			<li><a href="#bad_cruize">Bad Cruize</a></li>
+			<li><a href="#PDC">PDC</a></li>
+		</ul>
+		<li><a href="#other" style="font-size: 120%">Other</a></li>
+		<ul>
+			<li><a href="#VFR">VFR</a></li>
+			<li><a href="#missed_slant">Missing Slant</a></li>
+			<li><a href="#Amended_PM">Ammended PM</a></li>
+			<li><a href="#Squaking">Squaking</a></li>
+			<li><a href="#Atis">Atis</a></li>
+		</ul>
+	</ul>
+
+	<h2 id="controls">Controls</h2>
+<p>CTRL + click on an aircraft to get aircraft flight plan</p>
+<p>CTRL + ALT + click aircraft | Draw aircraft's filed route on scope</p>
+<p>CTRL + up or down arrow to change text log size</p>
+<p>CTRL + S silence conflict alert sound</p>
+
+	<br>
+<p>ESC (in scope) clears command line if not empty, else clears radio selected aircraft.</p>
+
+	<br>
+<p>F2 then airport identifier for weather</p>
+<p>F4 &lt;sectorID&gt; &lt;asel&gt; to initiate handoff to a controller</p>
+<p>F5 change cruise</p>
+<p>F7 Metar for arrival airport</p>
+<p>F8 to change temp altitude</p>
+<p>F9 to assign squak</p>
+<p>F9 v | r | t &lt;asel&gt; to assign voice tag (when not put in by default by a flight plan)</p>
+
+	<br>
+<p>Home &lt;asel&gt; send contact request</p>
+
+	<br>
+<p>Double click aircraft flight strip | equivalent to clicking on the aircraft</p>
+
+	<br>
+<p>Alt Click flight strip to delete flight strip or seperator</p>
+<p>ALT Click aircraft to add strip to the bay</p>
+
+	<br>
+	<a href="#toc" style="font-size: 120%">Table of Contents</a>
+
+	<h2 id="commands">Commands</h2>
+<p><b>.</b>wx or .metar &lt;ICAO&gt;</p>
+<p><b>.</b>atis for own atis or .atis [callsign] for someone elses</p>
+<p><b>.</b>transfer sectorID to handoff all targets to controller</p>
+<p><b>.</b>chat nobody - to test commands</p>
+		
+	<br>
+	<p id="bad_cruize"><b>.</b>cruzh 390 410 - (In FL) send a msg to someone about wrong altitude for direction of flight with 2 suggestions</p>
+	<p><b>.</b>cruzl 110 130 - (below FL) send a msg to someone about wrong altitude for direction of flight with 2 suggestions</p>
+	
+	<br>
+<h4 id="PDC">=== PRE-DEPARTURE CLEARANCES (PDCs) ===</h4>
+
+<h5>-- Message 1 ---</h5>
+	<p><b>.</b>pdcsid &lt;frequency using identifier (ex: 2W)&gt; - PDC with a SID</p>
+
+<p><b>.</b>pdcsido - PDC with a SID to Unicom</p>
+
+	<p><b>.</b>pdcvec &lt;first waypoint&gt; &lt;frequency using identifier (ex: 2W)&gt; - PDC, vectors to first waypoint</p>
+
+	<p><b>.</b>pdcveco &lt;first waypoint&gt; - PDC, vectors to first waypoint to Unicom</p>
+
+<h5>-- Message 2 --</h5>
+	<p><b>.</b>pdc2 &lt;runway&gt; &lt;Taxiway letter&gt; &lt;frequency using identifier (ex: 2W)&gt; - message sent after PDC</p>
+	
+	<br>
+<p><b>.</b>logofftime TIME (I assume in Zulu)</p>
+<p><b>.</b>nologofftime</p>
+	
+	<br>
+<p><b>.</b>strip LABEL add strip for the specified aircraft to the bay</p>
+<p><b>.</b>sep LABEL create a seperator</p>
+	
+	<br>
+<p><b>.</b>log FILENAME</p>
+
+	<br>
+	<a href="#toc" style="font-size: 120%">Table of Contents</a>
+
+	<h2 id="other">Other</h2>
+<p id="VFR">Maintain VFR at or below &lt;alt&gt;, departure on &lt;freq&gt;, squak &lt;code&gt;</p>
+	<p>VFR Flight Following (Mark VFF) in scratchpad (hit insert and type VFF while aircraft is selected)</p>
+	<p>REMEBER TO CLEAR WHEN AIRCRAFT IS LEAVING ARTCC</p>
+	
+	<br>
+<p id="missed_slant">For missing slant code:</p>
+<p>"What are your navigation capabilities?"</p>
+	
+	<br>
+<p id="Amended_PM">PM in VRC:</p>
+<p>right click on an aircraft</p>
+<p>"I have an admendment for your route. Advise if you are able to accept.""</p>
+<p>"I will amend your flight plan. The rest of your clearance remains unchanged"</p>
+	
+	<br>
+<p>A cloud ceiling is broken (BKN) or OVC</p>
+<p>For voice atis. preface with ceiling (ex: ceiling bkn 011 ovc 055)</p>
+		
+	<br>
+<p id="Squaking">Squaking normal. star trail.</p>
+<p>not mode C. triangle trail.</p>
+<p>squaking C and flashing (or 0000) = incorrect squak code</p>
+	
+	<br>
+	<p>letters behind aircraft - based on current controller's arts tag from POF file</p>
+	
+	<br>
+<p>leave out un-nessasary words (initially)</p>
+<p>advice higher controller when runway crossing complete</p>
+	
+	<br>
+<p>Aircraft above FL280 have a vap of 1000 feet (like below FL280) but require /L or /W certification</p>
+	
+	<br>
+	<p id="Atis">Setup airport atis - vATIS, select file, or just go with a metar</p>
+	<p>Controller atis within atis menu of vRC</p>
+
+	<br>
+<a href="#toc" style="font-size: 120%">Table of Contents</a>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	
+</body>
+</html>
