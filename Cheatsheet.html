@@ -52,7 +52,7 @@
 
 	
 	<h2 id="Templates">Templates</h2>
-	<h4 id="DEL_TEMP_IFR_NO">Delivery - IFR no radar (APP/DEP not online)</h4>
+	<h3 id="DEL_TEMP_IFR_NO">Delivery - IFR no radar (APP/DEP not online)</h3>
 	<p><b><i><u>Aircraft Callsign</u></i></b>, Position callsign,</p>
 	<p><b>C</b> Cleared to (<i><u>Destination</u></i>) Airport,</p>
 	<p><b>R</b> Direct (<b><u><i>VOR/FIX</i></u></b>), then as filed,</p>
@@ -60,10 +60,67 @@
 	<p>&nbsp;&nbsp;&nbsp;&nbsp;Expect Flight Level (<b><i><u>###</u></i></b>) 1-0 minutes after departure,</p>
 	<p><b>F</b> Departure Frequency (<b><u><i>122.8</i></u></b>),</p>
 	<p><b>T</b> Squawk <b><i><u>####</u></i></b>.</p>
-	<h4 id="DEL_TEMP_IFR_YES">Delivery - IFR with radar (APP/DEP online)</h4>
-	<h4 id="DEL_TEMP_IFR_SID">Delivery - IFR SID with radar (APP/DEP online)</h4>
-	<h4 id="DEL_TEMP_VFR">Delivery - VFR</h4>
-	<h4 id="GND_TEMP">Ground Taxi</h4>
+	<p><i>Wait for READBACK</i></p>
+	<br>
+	<p>(<b><i><u>Aircraft Callsign</u></i></b>), Readback Correct,</p>
+	<p>"ALTIMETER (<i>####</i>)"   or "Info (ATIS) is current" or "Thanks for Info (ATIS)" if they called up with Atis</p>
+	<p>Expect Runway (____)</p>
+	<p>Push and start at your discression</p>
+	<p>Advise ready to taxi golding short of (point / taxiway)</p>
+	
+	<h3 id="DEL_TEMP_IFR_YES">Delivery - IFR with radar (APP/DEP online)</h3>
+	<p><b><i><u>Aircraft Callsign</u></i></b>, Position callsign,</p>
+	<p><b>C</b> Cleared to (<i><u>Destination</u></i>) Airport,</p>
+	<p><b>R</b> via Radar Vectors (<b><u><i>VOR/FIX</i></u></b>), then as filed,</p>
+	<p><b>A</b> Maintain (<i>Initial Alt</i>),</p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Expect Flight Level (<b><i><u>###</u></i></b>) 1-0 minutes after departure,</p>
+	<p><b>F</b> Departure Frequency (<u><i>###.##</i></u>),</p>
+	<p><b>T</b> Squawk <b><i><u>####</u></i></b>.</p>
+	<p><i>Wait for READBACK</i></p>
+	<br>
+	<p>(<b><i><u>Aircraft Callsign</u></i></b>), Readback Correct,</p>
+	<p>"ALTIMETER (<i>####</i>)"   or "Info (ATIS) is current" or "Thanks for Info (ATIS)" if they called up with Atis</p>
+	<p>Expect Runway (____)</p>
+	<p>Push and start at your discression</p>
+	<p>Advise ready to taxi golding short of (point / taxiway)</p>
+
+	<h3 id="DEL_TEMP_IFR_SID">Delivery - IFR SID with radar (APP/DEP online)</h3>
+	<p><b><i><u>Aircraft Callsign</u></i></b>, Position callsign,</p>
+	<p><b>C</b> Cleared to (<i><u>Destination</u></i>) Airport,</p>
+	<p><b>R</b> via the <b><u><i>ABCDE3</i></u></b> <i>Departure</i>, ZYXWV <i>transition</i>, then as filed,</p>
+	<p><b>A</b> Maintain (<i>Initial Alt</i>),</p>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;Expect Flight Level (<b><i><u>###</u></i></b>) 1-0 minutes after departure,</p>
+	<p><b>F</b> Departure Frequency (<u><i>###.##</i></u>),</p>
+	<p><b>T</b> Squawk <b><i><u>####</u></i></b>.</p>
+	<p><i>Wait for READBACK</i></p>
+	<br>
+	<p>(<b><i><u>Aircraft Callsign</u></i></b>), Readback Correct,</p>
+	<p>"ALTIMETER (<i>####</i>)"   or "Info (ATIS) is current" or "Thanks for Info (ATIS)" if they called up with Atis</p>
+	<p>Expect Runway (____)</p>
+	<p>Push and start at your discression</p>
+	<p>Advise ready to taxi golding short of (point / taxiway)</p>
+	
+	<h3 id="DEL_TEMP_VFR">Delivery - VFR</h3>
+	<p><b><i><u>Aircraft Callsign</u></i></b>, Position callsign,</p>
+	<p>Maintain VFR at or below (<b><i><u>Altitude</u></i></b>),</p>
+	<p><b>F</b> Departure Frequency (<u><i>###.##</i></u>),</p>
+	<p><b>T</b> Squawk <b><i><u>####</u></i></b>.</p>
+	<p><i>Wait for READBACK</i></p>
+	<br>
+	<p>(<b><i><u>Aircraft Callsign</u></i></b>), Readback Correct,</p>
+	<p>"ALTIMETER (<i>####</i>)"   or "Info (ATIS) is current" or "Thanks for Info (ATIS)" if they called up with Atis</p>
+	<p>Expect Runway (____)</p>
+	<p>Push and start at your discression</p>
+	<p>Advise ready to taxi golding short of (point / taxiway)</p>
+	
+	
+	<h3 id="GND_TEMP">Ground Taxi</h3>
+	<p>(<b><i><u>Aircraft Callsign</u></i></b>)</p>
+	<p>Runway (<b><i>RWY</i></b>) Taxi VIA (_____)</p>
+	<p><b>*</b><i>Make use of "Hold short runway <b><i><u>X</u></i></b>" and "cross runway <b><i><u>X</u></i></b>" as nessasary</i><b>*</b></p>
+	<p><b>*</b><i>Remember to ask controllers above for active runway crossings</i><b>*</b></p>
+	<p><b>*</b><i>Remember to inform above controllers of completed runway crossings</i><b>*</b></p>
+	<p><b>*</b><i>Remember to tell an aircraft to contact an above controller and send the aircraft's strip</i><b>*</b></p>
 	
 	
 	<br>
