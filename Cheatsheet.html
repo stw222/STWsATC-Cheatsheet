@@ -7,15 +7,26 @@
 	<style>
 		body {padding: 10px;}
 		p {font-size: 110%; padding: 0; margin: 0;}
-		a {padding-top: 10px; padding-bottom: 10px; margin-top: 10px; margin-botton: 10px;}
+		a {padding-top: 10px; padding-bottom: 10px; margin-top: 10px; margin-botton: 10px; font-size: 120%;}
 	</style>
 </head>
 
 <body>
-	<h1 id="toc"> Table of Contents </h1>
+	<h1 id="toc"> Table of Contents</h1>
 	<ul>
-		<li><a href="#controls" style="font-size: 120%">Controls</a></li>
-		<li><a href="#commands" style="font-size: 120%">Commands</a></li>
+		<li><a href="#Templates">Templates</a></li>
+		<ul>
+			<li><a href="#DEL_TEMP_IFR_NO">Delivery Template</a></li>
+			<ul>
+				<li><a href="#DEL_TEMP_IFR_NO">Delivery - IFR no radar</a></li>
+				<li><a href="#DEL_TEMP_IFR_YES">Delivery - IFR with radar</a></li>
+				<li><a href="#DEL_TEMP_IFR_SID">Delivery - IFR SID with radar</a></li>
+				<li><a href="#DEL_TEMP_VFR">Delivery - VFR</a></li>
+			</ul>
+			<li><a href="#GND_TEMP">Ground Template</a></li>
+		</ul>
+		<li><a href="#controls">Controls</a></li>
+		<li><a href="#commands">Commands</a></li>
 		<ul>
 			<li><a href="#bad_cruize">Bad Cruize</a></li>
 			<li><a href="#PDC">PDC</a></li>
@@ -39,6 +50,17 @@
 		</ul>
 	</ul>
 
+	
+	<h2 id="Templates">Templates</h2>
+	<h4 id="DEL_TEMP_IFR_NO">Delivery - IFR no radar (APP/DEP not online)</h4>
+	<h4 id="DEL_TEMP_IFR_YES">Delivery - IFR with radar (APP/DEP online)</h4>
+	<h4 id="DEL_TEMP_IFR_SID">Delivery - IFR SID with radar (APP/DEP online)</h4>
+	<h4 id="DEL_TEMP_VFR">Delivery - VFR</h4>
+	<h4 id="GND_TEMP">Ground Taxi</h4>
+	
+	
+	<br>
+	<a href="#toc" style="font-size: 120%">Table of Contents</a>
 	
 	
 	
@@ -121,6 +143,7 @@
 	<p><b>.</b>cruzh &lt;lower alt&gt; &lt;higher alt&gt; - (In FL) send a msg to someone about wrong altitude for direction of flight with 2 suggestions</p>
 	<p><b>.</b>cruzl &lt;lower alt&gt; &lt;higher alt&gt; - (below FL) send a msg to someone about wrong altitude for direction of flight with 2 suggestions</p>
 	<p><b>.</b>rte - Cleared to $arr, via $route. Rest of clearance remains unchanged.</p>
+	
 	<h5 id="Alias_VFR">VFR</h5>
 	<p><b>.</b>norte &lt;cardinal direction&gt; - VFR to the (direction), departure freq unicom, squawk $squawk</p>
 	<p><b>.</b>vfrclr &lt;cardinal direction&gt; &lt;frequency using identifier (ex: 2W)&gt; - VFR to the (direction) approved, Maintain VFR at/below $temp, frequency $freq($2) squawk $squawk</p>
@@ -135,7 +158,12 @@
 	<p><b>.</b>advise -  Advise ready to taxi.</p>
 	<p><b>.</b>push - Push start pilot's discretion</p>
 	
+	
+	<!-- put VFR - Class B here once ive trained for S1 Minor -->
+	
+	
 	<h5 id="Alias_IFRNO">IFR - No Radar</h5>
+	
 	
 	<h5 id-"Alias_IFR">IFR - With Radar</h5>
 	
