@@ -101,6 +101,8 @@
 			<span></span>
 		</button>
 	</div>
+	<p><i>Disclaimer: This webpage is not meant to look pretty, but is meant to be functional. This page is also limited by my own knowledge and anything i have learned in any vZID documents. If you find any issues with spelling, or logic, or something that is simply incorrect, let Stephen Welsh know either via the Github Issues page, or Discord.</i></p>
+	<a href = "https://github.com/stw222/STWsATC-Cheatsheet/issues">Github Issues page</a>
 	<h1 id="toc"> Table of Contents</h1>
 	<ul class="toc">
 		<li><a href="#Templates">Templates</a></li>
@@ -210,7 +212,7 @@
 	
 	<h3 id="DEL_TEMP_VFR">*************** Delivery - VFR ***************</h3>
 	<p><b><i><u>Aircraft Callsign</u></i></b>, Position callsign,</p>
-	<p>Maintain VFR at or below (<b><i><u>Altitude</u></i></b>),</p>
+	<p>Maintain VFR at or below (<b><i><u>Altitude</u></i></b>), <i>(025 for props 045 for jets initially)</i></p>
 	<p><b>F</b> Departure Frequency (<u><i>###.##</i></u>),</p>
 	<p><b>T</b> Squawk <b><i><u>####</u></i></b>.</p>
 	<p><i>Wait for READBACK</i></p>
@@ -325,7 +327,7 @@
 	<p><b>.</b>rbca &lt;runway&gt; &lt;taxiway&gt;- Readback correct, expect runway $uc($1), push start pilot's discretion, call for taxi holding short taxiway $uc($2), altimeter $altim($dep)</p>
 	<p><b>.</b>rbcatis &lt;runway&gt; &lt;taxiway&gt; - Readback correct, ATIS info $atiscode current, expect runway $uc($1), push start pilot's discretion, call for taxi holding short taxiway $uc($2).</p>
 	<p><b>.</b>rbcatisdel &lt;runway&gt; &lt;frequency using identifier (ex: 2W)&gt; - Readback correct, ATIS info $atiscode current, expect runway $1, push start pilot's discretion, contact $radioname($2) on $freq($2)</p>
-	<p><b>.</b>callgnd &lt;taxiway&gt; - Readback correct, push start pilot's discretion, call this freq short of taxiway $uc($1) when ready to taxi, altimeter $altim($dep)<p/>
+	<p><b>.</b>callgnd &lt;taxiway&gt; - Readback correct, push start pilot's discretion, call this freq short of taxiway $uc($1) when ready to taxi, altimeter $altim($dep)</p>
 	<p><b>.</b>calldel &lt;frequency using identifier (ex: 2W)&gt; &lt;taxiway&gt; - Readback correct, push start pilot's discretion, contact $radioname($1) on $freq($1) short taxiway $uc($2) when ready taxi, altimeter $altim($dep)</p>
 	<p><b>.</b>advise -  Advise ready to taxi.</p>
 	<p><b>.</b>push - Push start pilot's discretion</p>
