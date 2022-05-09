@@ -8,12 +8,14 @@
 		body {padding: 10px;}
 		p {font-size: 110%; padding: 0; margin: 0;}
 		a {padding-top: 10px; padding-bottom: 10px; margin-top: 10px; margin-botton: 10px; font-size: 120%;}
+		h1, h2{text-align: center; padding: 5px; border: 3px solid green;}
+		h3, h4, h5 {text-align: center; padding: 5px; border: 3px solid blue;}
 	</style>
 </head>
 
 <body>
 	<h1 id="toc"> Table of Contents</h1>
-	<ul>
+	<ul class="toc">
 		<li><a href="#Templates">Templates</a></li>
 		<ul>
 			<li><a href="#DEL_TEMP_IFR_NO">Delivery Template</a></li>
@@ -51,7 +53,7 @@
 	</ul>
 
 	
-	<h2 id="Templates">Templates</h2>
+	<h2 id="Templates">------------------------------ Templates ------------------------------</h2>
 	
 	<img src="Full_Flight_Strip_Steps.png" alt="A flight strip labeled with the recommended order to check validity">
 	<ol>
@@ -71,7 +73,7 @@
 	<p>RWY = runway they will take off from</p>
 	<p>h and s = Heading and speed for radar controllers, sometimes for local to assign runway heading</p>
 	
-	<h3 id="DEL_TEMP_IFR_NO">Delivery - IFR no radar (APP/DEP not online)</h3>
+	<h3 id="DEL_TEMP_IFR_NO">*************** Delivery - IFR no radar (APP/DEP not online) ***************</h3>
 	<p><b><i><u>Aircraft Callsign</u></i></b>, Position callsign,</p>
 	<p><b>C</b> Cleared to (<i><u>Destination</u></i>) Airport,</p>
 	<p><b>R</b> Direct (<b><u><i>VOR/FIX</i></u></b>), then as filed,</p>
@@ -87,7 +89,7 @@
 	<p>Push and start at your discression</p>
 	<p>Advise ready to taxi golding short of (point / taxiway)</p>
 	
-	<h3 id="DEL_TEMP_IFR_YES">Delivery - IFR with radar (APP/DEP online)</h3>
+	<h3 id="DEL_TEMP_IFR_YES">*************** Delivery - IFR with radar (APP/DEP online) ***************</h3>
 	<p><b><i><u>Aircraft Callsign</u></i></b>, Position callsign,</p>
 	<p><b>C</b> Cleared to (<i><u>Destination</u></i>) Airport,</p>
 	<p><b>R</b> via Radar Vectors (<b><u><i>VOR/FIX</i></u></b>), then as filed,</p>
@@ -103,7 +105,7 @@
 	<p>Push and start at your discression</p>
 	<p>Advise ready to taxi golding short of (point / taxiway)</p>
 
-	<h3 id="DEL_TEMP_IFR_SID">Delivery - IFR SID with radar (APP/DEP online)</h3>
+	<h3 id="DEL_TEMP_IFR_SID">*************** Delivery - IFR SID with radar (APP/DEP online) ***************</h3>
 	<p><b><i><u>Aircraft Callsign</u></i></b>, Position callsign,</p>
 	<p><b>C</b> Cleared to (<i><u>Destination</u></i>) Airport,</p>
 	<p><b>R</b> via the <b><u><i>ABCDE3</i></u></b> <i>Departure</i>, ZYXWV <i>transition</i>, then as filed,</p>
@@ -119,7 +121,7 @@
 	<p>Push and start at your discression</p>
 	<p>Advise ready to taxi golding short of (point / taxiway)</p>
 	
-	<h3 id="DEL_TEMP_VFR">Delivery - VFR</h3>
+	<h3 id="DEL_TEMP_VFR">*************** Delivery - VFR ***************</h3>
 	<p><b><i><u>Aircraft Callsign</u></i></b>, Position callsign,</p>
 	<p>Maintain VFR at or below (<b><i><u>Altitude</u></i></b>),</p>
 	<p><b>F</b> Departure Frequency (<u><i>###.##</i></u>),</p>
@@ -133,7 +135,7 @@
 	<p>Advise ready to taxi golding short of (point / taxiway)</p>
 	
 	
-	<h3 id="GND_TEMP">Ground Taxi</h3>
+	<h3 id="GND_TEMP">*************** Ground Taxi ***************</h3>
 	<p>(<b><i><u>Aircraft Callsign</u></i></b>)</p>
 	<p>Runway (<b><i>RWY</i></b>) Taxi VIA (_____)</p>
 	<p><b>*</b><i>Make use of "Hold short runway <b><i><u>X</u></i></b>" and "cross runway <b><i><u>X</u></i></b>" as nessasary</i><b>*</b></p>
@@ -147,7 +149,7 @@
 	
 	
 	
-	<h2 id="controls">Controls</h2>
+	<h2 id="controls">------------------------------ Controls ------------------------------</h2>
 <p>CTRL + click on an aircraft to get aircraft flight plan</p>
 <p>CTRL + ALT + click aircraft | Draw aircraft's filed route on scope</p>
 <p>CTRL + up or down arrow to change text log size</p>
@@ -181,7 +183,7 @@
 	
 	
 
-	<h2 id="commands">Commands</h2>
+	<h2 id="commands">------------------------------ Commands ------------------------------</h2>
 <p><b>.</b>wx or .metar &lt;ICAO&gt;</p>
 <p><b>.</b>atis for own atis or .atis [callsign] for someone elses</p>
 <p><b>.</b>transfer sectorID to handoff all targets to controller</p>
@@ -192,7 +194,7 @@
 	<p><b>.</b>cruzl &lt;lower alt&gt; &lt;higher alt&gt; - (below FL) send a msg to someone about wrong altitude for direction of flight with 2 suggestions</p>
 	
 	<br>
-<h4 id="PDC">=== PRE-DEPARTURE CLEARANCES (PDCs) ===</h4>
+<h4 id="PDC">*************** PRE-DEPARTURE CLEARANCES (PDCs) ***************</h4>
 
 <h5>-- Message 1 ---</h5>
 	<p><b>.</b>pdcsid &lt;frequency using identifier (ex: 2W)&gt; - PDC with a SID</p>
@@ -218,8 +220,8 @@
 <p><b>.</b>log FILENAME</p>
 	
 	<br>
-	<h3 id="Alias">Alias Commands for Text pilots</h3>
-	<h4 id="Alias_cDEL">Clearance Delivery Alias commands</h4>
+	<h3 id="Alias">*************** Alias Commands for Text pilots *************** </h3>
+	<h4 id="Alias_cDEL">*************** Clearance Delivery Alias commands ***************</h4>
 	<p><b>.</b>cor - Clearance on request, Standby</p>
 	<p><b>.</b>cor1 &lt;number&gt; - Clearance on request, number $1, standby</p>
 	<p><b>.</b>gatis &lt;frequency using identifier (ex: 2W)&gt;- Be advised information $atiscode is available on $freq($1). (IM ASSUMING THIS IS HOW THE FREAQUENCY PART WORKS)</p>
@@ -227,7 +229,7 @@
 	<p><b>.</b>cruzl &lt;lower alt&gt; &lt;higher alt&gt; - (below FL) send a msg to someone about wrong altitude for direction of flight with 2 suggestions</p>
 	<p><b>.</b>rte - Cleared to $arr, via $route. Rest of clearance remains unchanged.</p>
 	
-	<h5 id="Alias_VFR">VFR</h5>
+	<h5 id="Alias_VFR">*************** VFR ***************</h5>
 	<p><b>.</b>norte &lt;cardinal direction&gt; - VFR to the (direction), departure freq unicom, squawk $squawk</p>
 	<p><b>.</b>vfrclr &lt;cardinal direction&gt; &lt;frequency using identifier (ex: 2W)&gt; - VFR to the (direction) approved, Maintain VFR at/below $temp, frequency $freq($2) squawk $squawk</p>
 	<p><b>.</b>vfrpat &lt;runway&gt;- remain in the pattern, expect Runway $uc($1), squawk $squawk</p>
@@ -257,7 +259,7 @@
 	
 	
 
-	<h2 id="other">Other</h2>
+	<h2 id="other">------------------------------ Other ------------------------------</h2>
 <p id="VFR">Maintain VFR at or below &lt;alt&gt;, departure on &lt;freq&gt;, squak &lt;code&gt;</p>
 	<p>VFR Flight Following (Mark VFF) in scratchpad (hit insert and type VFF while aircraft is selected)</p>
 	<p>REMEBER TO CLEAR WHEN AIRCRAFT IS LEAVING ARTCC</p>
