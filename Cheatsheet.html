@@ -1,12 +1,13 @@
 <!doctype html>
-<html>
-<head>
+<html><head>
 	<meta charset="utf-8">
 	<title>Stew's ATC cheats</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- <link rel="stylesheet" href="styles_old.css"> -->
 	<style>
 		body {padding: 30px;}
 		p {font-size: 110%; padding: 0; margin: 0;}
+		li {font-size: 110%;}
 		a {padding-top: 10px; padding-bottom: 10px; margin-top: 10px; margin-botton: 10px; font-size: 120%;}
 		h1, h2{text-align: center; padding: 5px; border: 3px solid green;}
 		h3, h4, h5 {text-align: center; padding: 5px; border: 3px solid blue;}
@@ -86,6 +87,13 @@
 				app.setAttribute("light-mode", "dark");
     		}		
 		}
+		window.addEventListener("storage", function () {
+			if (localStorage.lightMode == "dark") {
+        	app.setAttribute("light-mode", "dark");
+			} else {	
+	    		app.setAttribute("light-mode", "light");
+			}
+		}, false);
 	</script>
 </head>
 
@@ -250,7 +258,7 @@
 	
 	<p><i>*Fill in info here*</i></p>
 	
-	<h3 id-"SOP_ZID">*************** General ZID SOP info ***************</h3>
+	<h3 id="SOP_ZID">*************** General ZID SOP info ***************</h3>
 	
 	<p><i>*Fill in info here*</i></p>
 	
@@ -265,6 +273,44 @@
 	<h3 id="SOP_SDF">*************** SDF SOP Info ***************</h3>
 	
 	<p><i>*Fill in info here*</i></p>
+	
+	<h5>list o' Callsigns</h5>
+	<p><i>*Red callsigns are only used during events*</i></p>
+	<p><i>*Green callsigns are the primary positions*</i></p>
+	<p style="color:green">Clearance Delivery | &nbsp;&nbsp;&nbsp;SDF_DEL&nbsp;&nbsp;&nbsp; &nbsp;| 4C | 126.100</p>
+	<p style="color:green">East Ground &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| SDF_E_GND &nbsp;| 4G | 121.700</p>
+	<p style="color:red">West Ground &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|  SDF_W_GND  |  4Y | 119.825</p>
+	<p style="color:green">Local East &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;SDF_E_TWR |  4L | 124.200</p>
+	<p>Local West &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| SDF_W_TWR | 4T | 135.200</p>
+	<p>Feeder East &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp; SDF_A_APP &nbsp;| 4A | 134.150</p>
+	<p style="color:green">Feeder West &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;SDF_I_APP &nbsp;&nbsp;| 4I&nbsp; | 132.325</p>
+	<p>Final East &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp; SDF_E_APP&nbsp; | 4E &nbsp;| 135.775</p>
+	<p>Final West &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;SDF_W_APP | 4W | 120.300</p>
+	<p>Departure East &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;SDF_B_DEP &nbsp;| 4B | 132.075</p>
+	<p>Departure West &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp; SDF_D_DEP &nbsp;| 4D | 123.675</p>
+	
+	<br>
+	<p><b>Order of Combination</b></p>
+	<ol>
+		<li>TRACON</li>
+		<ol>
+			<li>Departure East and West combines into Departure West</li>
+			<li>Final East and West Combines into Final West</li>
+			<li>Feeder East and West combines into Feeder West</li>
+			<li>Feeder West and Final West combines into Feeder West</li>
+			<li>Feeder West and Departure West combines into Feeder West</li>
+		</ol>
+		<li>Tower</li>
+		<ol>
+			<li>Local Control East and West combines into Local West</li>
+			<li>Ground Control East and West combines into Ground East</li>
+		</ol>
+	</ol>
+	
+	<p>No Special VFR fixed wing operations</p>
+	
+	<br>
+	<p>Aircraft remaining in the pattern will be asigned a squawk of 1201, adding one for each aircraft in the pattern</p>
 	
 	<h3 id="SOP_minor_fields">*************** Minor Fields SOP ***************</h3>
 	
