@@ -188,6 +188,7 @@
 	<p>RB = X for verbal, P for PDC</p>
 	<p>RWY = runway they will take off from</p>
 	<p>h and s = Heading and speed for radar controllers, sometimes for local to assign runway heading</p>
+	<p>h slot is also used for the first fix on an RNAV</p>
 	
 	
 	<br>
@@ -338,7 +339,7 @@
 		<li>Ask other controllers in TS if anyone is interested in relieving your position. If not, then continue to step 2</li>
 		<li>At least 10 minutes prior to closing, controllers will notify other controllers and pilots of their intentions by the following:</li>
 		<ol>
-			<li>Initiate the .break command</li>
+			<li>Initiate the .break command (Radar and Enroute controllers)</li>
 			<li>Notify controllers one tier above and below you through TS</li>
 			<li>If the facility closing is a Center sector, notify other controllers by using the ATC channel (/ command)</li>
 			<li>Announce the facility is closing in ## minutes on frequency by text and voice. Text should use the .notam1 ## alias command and voice should use the following phrase: <q>Attention all aircraft this frequency, [position name] will be closing in ## minutes.</q></li>
@@ -423,6 +424,9 @@
 	<p>Aircraft remaining in the pattern will be asigned a squawk of 1201, adding one for each aircraft in the pattern</p>
 	
 	<br>
+	<p>Jets are assigned an initial altitude of 5000 (050 on strips), props and turboprops are assigned 3000 (030)</p>
+	
+	<br>
 	<h5>UPS ramp labels at KSDF</h5>
 	<img src="img/KSDF_UPS_2.png" alt="UPS West ramp 23">
 	<img src="img/KSDF_UPS.png" alt="UPS ramp lables at KSDF">
@@ -431,17 +435,18 @@
 	<h5>list o' Callsigns</h5>
 	<p><i>*Red callsigns are only used during events*</i></p>
 	<p><i>*Green callsigns are the primary positions*</i></p>
-	<p style="color:green">Clearance Delivery | &nbsp;&nbsp;&nbsp;SDF_DEL&nbsp;&nbsp;&nbsp; &nbsp;| 4C | 126.100</p>
-	<p style="color:green">East Ground &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| SDF_E_GND &nbsp;| 4G | 121.700</p>
-	<p style="color:red">West Ground &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|  SDF_W_GND  |  4Y | 119.825</p>
-	<p style="color:green">Local East &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;SDF_E_TWR |  4L | 124.200</p>
-	<p>Local West &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| SDF_W_TWR | 4T | 135.200</p>
-	<p>Feeder East &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp; SDF_A_APP &nbsp;| 4A | 134.150</p>
-	<p style="color:green">Feeder West &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;SDF_I_APP &nbsp;&nbsp;| 4I&nbsp; | 132.325</p>
-	<p>Final East &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp; SDF_E_APP&nbsp; | 4E &nbsp;| 135.775</p>
-	<p>Final West &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;SDF_W_APP | 4W | 120.300</p>
-	<p>Departure East &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;SDF_B_DEP &nbsp;| 4B | 132.075</p>
-	<p>Departure West &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp; SDF_D_DEP &nbsp;| 4D | 123.675</p>
+	<p>ATIS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; &nbsp;KSDF_ATIS &nbsp;| SA | 118.725</p>
+	<p style="color:green">Clearance Delivery | &nbsp; &nbsp;SDF_DEL &nbsp; &nbsp;| 4C | 126.100</p>
+	<p style="color:green">East Ground &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| SDF_E_GND &nbsp;| 4G | 121.700</p>
+	<p style="color:red">West Ground &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;|  SDF_W_GND  |  4Y | 119.825</p>
+	<p style="color:green">Local East &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp;SDF_E_TWR |  4L | 124.200</p>
+	<p>Local West &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| SDF_W_TWR | 4T | 135.200</p>
+	<p>Feeder East &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; SDF_A_APP &nbsp;| 4A | 134.150</p>
+	<p style="color:green">Feeder West &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp; SDF_I_APP &nbsp; | 4I&nbsp; | 132.325</p>
+	<p>Final East &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|&nbsp; SDF_E_APP&nbsp; | 4E &nbsp;| 135.775</p>
+	<p>Final West &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp;SDF_W_APP | 4W | 120.300</p>
+	<p>Departure East &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp;SDF_B_DEP &nbsp;| 4B | 132.075</p>
+	<p>Departure West &nbsp; &nbsp; &nbsp; |&nbsp; SDF_D_DEP &nbsp;| 4D | 123.675</p>
 	
 	<br>
 	<p><b>Order of Combination</b></p>
@@ -478,9 +483,13 @@
 
 	<br>
 <p>ESC (in scope) clears command line if not empty, else clears radio selected aircraft.</p>
+	
+	<br>
+	<p>Click on aircraft, then press + on the numpad to start a count up timer.</p>
+	<p>It helps to know who called up first for clearance. press + again to clear the timer</p>
 
 	<br>
-<p>F2 then airport identifier for weather</p>
+<p>F2 then airport identifier for weather box at the top of VRC</p>
 <p>F4 &lt;sectorID&gt; &lt;asel&gt; to initiate handoff to a controller</p>
 <p>F5 change cruise</p>
 <p>F7 Metar for arrival airport</p>
@@ -528,10 +537,6 @@
 
 <h5>-- Message 2 --</h5>
 	<p><b>.</b>pdc2 &lt;runway&gt; &lt;Taxiway letter&gt; &lt;frequency using identifier (ex: 2W)&gt; - message sent after PDC</p>
-	
-	<br>
-<p><b>.</b>logofftime TIME (I assume in Zulu)</p>
-<p><b>.</b>nologofftime</p>
 	
 	<br>
 <p><b>.</b>strip LABEL add strip for the specified aircraft to the bay</p>
