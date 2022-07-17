@@ -689,64 +689,64 @@
 	
 
 	<h2 id="commands">------------------------------ Commands ------------------------------</h2>
-	<p><b>.</b>wx or .metar &lt;ICAO&gt;</p>
-	<p><b>.</b>atis for own atis or .atis [callsign] for someone elses</p>
-	<p><b>.</b>transfer sectorID to handoff all targets to controller</p>
-	<p><b>.</b>chat nobody - to test commands</p>
-	<p><b>.</b>showstats - Use to show controlling stats from the current session. (Ctrl + up or down to resize text window)</p>
-	<p><b>.</b>recv - are you able to copy voice?</p>
+	<p><b>.wx</b> or <b>.metar</b> &lt;ICAO&gt;</p>
+	<p><b>.atis</b> for own atis or .atis [callsign] for someone elses</p>
+	<p><b>.transfer &lt;sectorID&gt;</b> to handoff all targets to controller</p>
+	<p><b>.chat nobody</b> - to test commands</p>
+	<p><b>.showstats</b> - Use to show controlling stats from the current session. (Ctrl + up or down to resize text window)</p>
+	<p><b>.recv</b> - are you able to copy voice?</p>
 	
 	<br>
-	<p id="bad_cruize"><b>.</b>cruzh &lt;lower alt&gt; &lt;higher alt&gt; - (In FL) send a msg to someone about wrong altitude for direction of flight with 2 suggestions</p>
-	<p><b>.</b>cruzl &lt;lower alt&gt; &lt;higher alt&gt; - (below FL) send a msg to someone about wrong altitude for direction of flight with 2 suggestions</p>
+	<p id="bad_cruize"><b>.cruzh &lt;lower alt&gt; &lt;higher alt&gt;</b> - (In FL) send a msg to someone about wrong altitude for direction of flight with 2 suggestions</p>
+	<p><b>.cruzl &lt;lower alt&gt; &lt;higher alt&gt;</b> - (below FL) send a msg to someone about wrong altitude for direction of flight with 2 suggestions</p>
 	
 	<br>
 <h4 id="PDC">*************** PRE-DEPARTURE CLEARANCES (PDCs) ***************</h4>
 
 <h5>-- Message 1 ---</h5>
-	<p><b>.</b>pdcsid &lt;frequency using identifier (ex: 2W)&gt; - PDC with a SID</p>
+	<p><b>.pdcsid &lt;frequency using identifier (ex: 2W)&gt;</b> - PDC with a SID</p>
 
-<p><b>.</b>pdcsido - PDC with a SID to Unicom</p>
+<p><b>.pdcsido</b> - PDC with a SID to Unicom</p>
 
-	<p><b>.</b>pdcvec &lt;first waypoint&gt; &lt;frequency using identifier (ex: 2W)&gt; - PDC, vectors to first waypoint</p>
+	<p><b>.pdcvec &lt;first waypoint&gt; &lt;frequency using identifier (ex: 2W)&gt;</b> - PDC, vectors to first waypoint</p>
 
-	<p><b>.</b>pdcveco &lt;first waypoint&gt; - PDC, vectors to first waypoint to Unicom</p>
+	<p><b>.pdcveco &lt;first waypoint&gt;</b> - PDC, vectors to first waypoint to Unicom</p>
 
 <h5>-- Message 2 --</h5>
-	<p><b>.</b>pdc2 &lt;runway&gt; &lt;Taxiway letter&gt; &lt;frequency using identifier (ex: 2W)&gt; - message sent after PDC</p>
+	<p><b>.pdc2 &lt;runway&gt; &lt;Taxiway letter&gt; &lt;frequency using identifier (ex: 2W)&gt;</b> - message sent after PDC</p>
 	
 	<br>
-<p><b>.</b>strip LABEL add strip for the specified aircraft to the bay</p>
-<p><b>.</b>sep LABEL create a seperator</p>
+<p><b>.strip &lt;LABEL&gt;</b> add strip for the specified aircraft to the bay</p>
+<p><b>.sep &lt;LABEL&gt;</b> create a seperator</p>
 	
 	<br>
-<p><b>.</b>log FILENAME</p>
+<p><b>.log &lt;FILENAME&gt;</b></p>
 	
 	<br>
 	<a href="#toc" style="font-size: 120%">Table of Contents</a>
 	
 	<h3 id="Alias">*************** Alias Commands for Text pilots *************** </h3>
 	<h4 id="Alias_cDEL">*************** Clearance Delivery Alias commands ***************</h4>
-	<p><b>.</b>cor - Clearance on request, Standby</p>
-	<p><b>.</b>cor1 &lt;number&gt; - Clearance on request, number $1, standby</p>
-	<p><b>.</b>gatis &lt;frequency using identifier (ex: 2W)&gt;- Be advised information $atiscode is available on $freq($1). (IM ASSUMING THIS IS HOW THE FREAQUENCY PART WORKS)</p>
-	<p><b>.</b>cruzh &lt;lower alt&gt; &lt;higher alt&gt; - (In FL) send a msg to someone about wrong altitude for direction of flight with 2 suggestions</p>
-	<p><b>.</b>cruzl &lt;lower alt&gt; &lt;higher alt&gt; - (below FL) send a msg to someone about wrong altitude for direction of flight with 2 suggestions</p>
-	<p><b>.</b>rte - Cleared to $arr, via $route. Rest of clearance remains unchanged.</p>
+	<p><b>.cor</b> - Clearance on request, Standby</p>
+	<p><b>.cor1 &lt;number&gt;</b> - Clearance on request, number $1, standby</p>
+	<p><b>.gatis &lt;frequency using identifier (ex: 2W)&gt;</b>- Be advised information $atiscode is available on $freq($1). (IM ASSUMING THIS IS HOW THE FREAQUENCY PART WORKS)</p>
+	<p><b>.cruzh &lt;lower alt&gt; &lt;higher alt&gt;</b> - (In FL) send a msg to someone about wrong altitude for direction of flight with 2 suggestions</p>
+	<p><b>.cruzl &lt;lower alt&gt; &lt;higher alt&gt;</b> - (below FL) send a msg to someone about wrong altitude for direction of flight with 2 suggestions</p>
+	<p><b>.rte - Cleared to $arr, via $route. Rest of clearance remains unchanged.</b></p>
 	
 	<h5 id="Alias_VFR">*************** VFR ***************</h5>
-	<p><b>.</b>norte &lt;cardinal direction&gt; - VFR to the (direction), departure freq unicom, squawk $squawk</p>
-	<p><b>.</b>vfrclr &lt;cardinal direction&gt; &lt;frequency using identifier (ex: 2W)&gt; - VFR to the (direction) approved, Maintain VFR at/below $temp, frequency $freq($2) squawk $squawk</p>
-	<p><b>.</b>vfrpat &lt;runway&gt;- remain in the pattern, expect Runway $uc($1), squawk $squawk</p>
-	<p><b>.</b>rb - Readback correct.</p>
-	<p><b>.</b>rbc &lt;runway&gt; - Readback correct, runway $uc($1), push and start pilot's discretion, advise ready to taxi, altimeter $altim($dep)</p>
-	<p><b>.</b>rbca &lt;runway&gt; &lt;taxiway&gt;- Readback correct, expect runway $uc($1), push start pilot's discretion, call for taxi holding short taxiway $uc($2), altimeter $altim($dep)</p>
-	<p><b>.</b>rbcatis &lt;runway&gt; &lt;taxiway&gt; - Readback correct, ATIS info $atiscode current, expect runway $uc($1), push start pilot's discretion, call for taxi holding short taxiway $uc($2).</p>
-	<p><b>.</b>rbcatisdel &lt;runway&gt; &lt;frequency using identifier (ex: 2W)&gt; - Readback correct, ATIS info $atiscode current, expect runway $1, push start pilot's discretion, contact $radioname($2) on $freq($2)</p>
-	<p><b>.</b>callgnd &lt;taxiway&gt; - Readback correct, push start pilot's discretion, call this freq short of taxiway $uc($1) when ready to taxi, altimeter $altim($dep)</p>
-	<p><b>.</b>calldel &lt;frequency using identifier (ex: 2W)&gt; &lt;taxiway&gt; - Readback correct, push start pilot's discretion, contact $radioname($1) on $freq($1) short taxiway $uc($2) when ready taxi, altimeter $altim($dep)</p>
-	<p><b>.</b>advise -  Advise ready to taxi.</p>
-	<p><b>.</b>push - Push start pilot's discretion</p>
+	<p><b>.norte &lt;cardinal direction&gt;</b> - VFR to the (direction), departure freq unicom, squawk $squawk</p>
+	<p><b>.vfrclr &lt;cardinal direction&gt; &lt;frequency using identifier (ex: 2W)&gt;</b> - VFR to the (direction) approved, Maintain VFR at/below $temp, frequency $freq($2) squawk $squawk</p>
+	<p><b>.vfrpat &lt;runway&gt;</b> - remain in the pattern, expect Runway $uc($1), squawk $squawk</p>
+	<p><b>.rb</b> - Readback correct.</p>
+	<p><b>.rbc &lt;runway&gt;</b> - Readback correct, runway $uc($1), push and start pilot's discretion, advise ready to taxi, altimeter $altim($dep)</p>
+	<p><b>.rbca &lt;runway&gt; &lt;taxiway&gt;</b> - Readback correct, expect runway $uc($1), push start pilot's discretion, call for taxi holding short taxiway $uc($2), altimeter $altim($dep)</p>
+	<p><b>.rbcatis &lt;runway&gt; &lt;taxiway&gt;</b> - Readback correct, ATIS info $atiscode current, expect runway $uc($1), push start pilot's discretion, call for taxi holding short taxiway $uc($2).</p>
+	<p><b>.rbcatisdel &lt;runway&gt; &lt;frequency using identifier (ex: 2W)&gt;</b> - Readback correct, ATIS info $atiscode current, expect runway $1, push start pilot's discretion, contact $radioname($2) on $freq($2)</p>
+	<p><b>.callgnd &lt;taxiway&gt;</b> - Readback correct, push start pilot's discretion, call this freq short of taxiway $uc($1) when ready to taxi, altimeter $altim($dep)</p>
+	<p><b>.calldel &lt;frequency using identifier (ex: 2W)&gt; &lt;taxiway&gt;</b> - Readback correct, push start pilot's discretion, contact $radioname($1) on $freq($1) short taxiway $uc($2) when ready taxi, altimeter $altim($dep)</p>
+	<p><b>.advise</b> -  Advise ready to taxi.</p>
+	<p><b>.push</b> - Push start pilot's discretion</p>
 	
 	
 	<!-- put VFR - Class B here once ive trained for S1 Major -->
