@@ -157,6 +157,7 @@
 					<li><a href="#Alias_IFRNO">IFR - No Radar</a></li>
 					<li><a href="#Alias_IFR">IFR - with Radar</a></li>
 				</ul>
+				<li><a href="#Alias_GND">Ground Aliases</a></li>
 			</ul>
 		</ul>
 		<li><a href="#other" style="font-size: 120%">Other</a></li>
@@ -812,7 +813,30 @@
 	<br>
 	<h5 id="Alias_GND">Ground Aliases</h5>
 	
+	<p><b>.sn</b> - squawk normal/mode c.</p>
+	<p><b>.sqbad</b> - check squawk, squawk $squawk.</p>
+	<p><b>.vatis</b> - Verify you have information $atiscode.</p>
+	<p><b>.hp</b> - Hold position</p>
+	<p><b>.hs</b> - Hold short of $uc($1)</p>
+	<p><b>.hsa &lt;runway&gt; &lt;air carrier or aircraft type&gt; &lt;Number in line&gt;</b> - Hold short of $uc($1) behind the $uc($2), you are number $3 for departure</p>
+	<p><b>.hsf &lt;runway&gt;</b> - Hold short runway , Traffic on final.</p>
+	<p><b>.hst&lt;taxiway&gt;</b> - Hold short of $uc($1), for traffic</p>
+	<p><b>.gw &lt;Aircraft or carrier&gt; &lt;Direction&gt;</b> - Give way to the $uc($1) to your $uc($2).</p>
+	<p><b>.cross &lt;Runway&gt; &lt;Crossing point&gt;</b> - Cleared to Cross Runway $uc($1) at $uc($2)</p>
+	<p><b>.cont</b> - Continue taxi.</p>
+	<p><b>.gate</b> - Taxi to the gate via taxiway $uc($1) $uc($2) $uc($3) $uc($4) $uc($5)</p>
+	<p><b>.ramp</b> - Taxi to the ramp via taxiway $uc($1) $uc($2) $uc($3) $uc($4) $uc($5)</p>
+	<p><b>.park</b> - Taxi to parking via taxiway $uc($1) $uc($2) $uc($3) $uc($4) $uc($5)</p>
+	<p><b>.parkpd</b> - Taxi to parking pilot's discretion, this frequency</p>
+	<p><b>.ramppd</b> - Taxi to the ramp pilot's discretion, this frequency</p>
+	<p><b>.mon &lt;frequency using identifier (ex: 2W)&gt;</b> - Monitor $radioname($1) on $freq($1)</p>
+	<p><b>.nfatc</b> - No further ATC services are available, frequency change to 122.80 approved. Have a good flight to $arr</p>
+	
 	<p><b>Ground Helis</b></p>
+	<p><b>.htaxi &lt;Runway&gt; &lt;Taxiway(s)&gt;</b> - Runway $uc($1), Hover taxi via $uc($2) $uc($3) $uc($4) $uc($5) and land.</p>
+	<p><b>.ataxi&lt;Parking area&gt;</b> Air-Taxi to $uc($1) and land.</p>
+	<p><b>.ataxihs &lt;Runway&gt;</b> Air-Taxi to $uc($1), hold short $uc(2).</p>
+	
 	
 	<br>
 	<a href="#toc" style="font-size: 120%">Table of Contents</a>
