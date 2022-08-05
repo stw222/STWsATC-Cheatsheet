@@ -770,7 +770,7 @@
 	<h4 id="Alias_cDEL">*************** Clearance Delivery Alias commands ***************</h4>
 	<p><b>.cor</b> - Clearance on request, Standby</p>
 	<p><b>.cor1 &lt;number&gt;</b> - Clearance on request, number $1, standby</p>
-	<p><b>.gatis &lt;frequency using identifier (ex: 2W)&gt;</b>- Be advised information $atiscode is available on $freq($1). (IM ASSUMING THIS IS HOW THE FREAQUENCY PART WORKS)</p>
+	<p><b>.gatis &lt;frequency using identifier (ex: 2W)&gt;</b>- Be advised information $atiscode is available on $freq($1).</p>
 	<p><b>.cruzh &lt;lower alt&gt; &lt;higher alt&gt;</b> - (In FL) send a msg to someone about wrong altitude for direction of flight with 2 suggestions</p>
 	<p><b>.cruzl &lt;lower alt&gt; &lt;higher alt&gt;</b> - (below FL) send a msg to someone about wrong altitude for direction of flight with 2 suggestions</p>
 	<p><b>.rte - Cleared to $arr, via $route. Rest of clearance remains unchanged.</b></p>
@@ -790,17 +790,30 @@
 	<p><b>.push</b> - Push start pilot's discretion</p>
 	
 	
-	<!-- put VFR - Class B here once ive trained for S1 Major -->
+	<p><b>Class Bravo</b></p>
+	<p><b>.clrbravo &lt;Direction of flight&gt; &lt;frequency using identifier (ex: 2W)&gt;</b></p> - cleared into the bravo
+	<p><b>.clobravo &lt;Direction of flight&gt;</b></p> - Radar services off-line
 	
 	
 	<h5 id="Alias_IFRNO">IFR - No Radar</h5>
 	
-	<p><i>*Fill in info here*</i></p>
+	<p><b>.cl</b> - IFR clearance via route</p>
+	<p><b>.claf</b> - IFR clearance as filed</p>
+	<p><b>.clrsid &lt;SID&gt; &lt;Transition&gt;</b> - IFR Clearance via SID</p>
+	<p><b>.clrd &lt;waypoint&gt;</b> - Clearance direct a waypoint</p>
 	
 	<h5 id="Alias_IFR">IFR - With Radar</h5>
 	
-	<p><i>*Fill in info here*</i></p>
+	<p><b>.clr &lt;frequency using identifier (ex: 2W)&gt;</b> - IFR clearance via route</p>
+	<p><b>.clafr &lt;frequency using identifier (ex: 2W)&gt;</b> - IFR clearance as filed</p>
+	<p><b>.clrsidr &lt;SID&gt; &lt;Transition&gt; &lt;frequency using identifier (ex: 2W)&gt;</b> - IFR Clearance via SID</p>
+	<p><b>.clv &lt;waypoint&gt; &lt;frequency using identifier (ex: 2W)&gt;</b> - Clearance direct a waypoint</p>
 
+	<br>
+	<h5 id="Alias_GND">Ground Aliases</h5>
+	
+	<p><b>Ground Helis</b></p>
+	
 	<br>
 	<a href="#toc" style="font-size: 120%">Table of Contents</a>
 	
