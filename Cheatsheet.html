@@ -77,6 +77,34 @@
     		position: absolute;
     		top: 160px;
 		}
+		
+		 /* Style the button that is used to open and close the collapsible content */
+	.collapsible {
+	  background-color: #6C6C6C;
+	  color: #CACACA cursor: pointer;
+	  padding: 8px;
+	  width: 80%;
+	  margin-left: 10%;
+	  margin-right: 10%;
+	  border: none;
+	  text-align: Center;
+	  outline: none;
+	  font-size: 15px;
+	}
+
+	/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+	.active, .collapsible:hover {
+	  background-color: #969696;
+	}
+
+	/* Style the collapsible content. Note: hidden by default */
+	.content {
+	  padding: 0 18px;
+	  /* background-color: white;*/
+	  max-height: 0;
+	  overflow: hidden;
+	  transition: max-height 0.2s ease-out;
+	} 
 	</style>
 	<script>
 		function toggle_light_mode() {
@@ -154,16 +182,6 @@
 			<li><a href="#bad_cruize">Bad Cruize</a></li>
 			<li><a href="#PDC">PDC</a></li>
 			<li><a href="#Alias">Alias commands for Txt pilots</a></li>
-			<ul>
-				<li><a href="#Alias_cDEL">Clearance Delivery Aliases</a></li>
-				<ul>
-					<li><a href="#Alias_VFR">VFR Aliases</a></li>
-					<li><a href="#Alias_IFRNO">IFR - No Radar</a></li>
-					<li><a href="#Alias_IFR">IFR - with Radar</a></li>
-				</ul>
-				<li><a href="#Alias_GND">Ground Aliases</a></li>
-				<li><a href="#Alias_TWR">Tower Aliases</a></li>
-			</ul>
 		</ul>
 		<li><a href="#other" style="font-size: 120%">Other</a></li>
 		<ul>
@@ -203,118 +221,137 @@
 	<p><a href="#Templates">Templates</a></p>
 	<p><a href="#DEL_TEMP_VFR">Delivery - VFR</a></p>
 	<br>
-	<a href="#toc" style="font-size: 120%">Table of Contents</a>
 	
 	<h3 id="DEL_TEMP_IFR_NO">*************** Delivery - IFR no radar (APP/DEP not online) ***************</h3>
-	<p><b><i><u>Aircraft Callsign</u></i></b>, Position callsign,</p>
-	<p><b>C</b> Cleared to (<i><u>Destination</u></i>) Airport,</p>
-	<p><b>R</b> Direct (<b><u><i>VOR/FIX</i></u></b>), then as filed,</p>
-	<p><b>A</b> Maintain (<i>Initial Alt</i>),</p>
-	<!-- This page requires lots of escape characters. a list of them here: https://mateam.net/html-escape-characters/ -->
-	<p>&nbsp;&nbsp; &nbsp;Expect Flight Level (<b><i><u>###</u></i></b>) 1-0 minutes after departure,</p>
-	<p><b>F</b> Departure Frequency (<b><u><i>122.8</i></u></b>),</p>
-	<p><b>T</b> Squawk <b><i><u>####</u></i></b>.</p>
-	<p><i>Wait for READBACK</i></p>
-	<br>
-	<p>(<b><i><u>Aircraft Callsign</u></i></b>), Readback Correct,</p>
-	<p>"ALTIMETER (<i>####</i>)"   or "Info (ATIS) is current, let me know when you have it" or "Thanks for Info (ATIS)" if they called up with Atis</p>
-	<p>Expect Runway (____)</p>
-	<p>Push and start at your discression</p>
-	<p>Advise ready to taxi golding short of (point / taxiway)</p>
+	<button type="button" class="collapsible">IFR no radar</button>
+	<div class="content">
+		<p><b><i><u>Aircraft Callsign</u></i></b>, Position callsign,</p>
+		<p><b>C</b> Cleared to (<i><u>Destination</u></i>) Airport,</p>
+		<p><b>R</b> Direct (<b><u><i>VOR/FIX</i></u></b>), then as filed,</p>
+		<p><b>A</b> Maintain (<i>Initial Alt</i>),</p>
+		<!-- This page requires lots of escape characters. a list of them here: https://mateam.net/html-escape-characters/ -->
+		<p>&nbsp;&nbsp; &nbsp;Expect Flight Level (<b><i><u>###</u></i></b>) 1-0 minutes after departure,</p>
+		<p><b>F</b> Departure Frequency (<b><u><i>122.8</i></u></b>),</p>
+		<p><b>T</b> Squawk <b><i><u>####</u></i></b>.</p>
+		<p><i>Wait for READBACK</i></p>
+		<br>
+		<p>(<b><i><u>Aircraft Callsign</u></i></b>), Readback Correct,</p>
+		<p>"ALTIMETER (<i>####</i>)"   or "Info (ATIS) is current, let me know when you have it" or "Thanks for Info (ATIS)" if they called up with Atis</p>
+		<p>Expect Runway (____)</p>
+		<p>Push and start at your discression</p>
+		<p>Advise ready to taxi golding short of (point / taxiway)</p>
+		
 	
+	
+		<br>
+		<p><a href="#Templates">Templates</a></p>
+		<p><a href="#DEL_TEMP_VFR">Delivery - VFR</a></p>
+		
+	</div>
+		
 	<br>
-	<p><a href="#Templates">Templates</a></p>
-	<p><a href="#DEL_TEMP_VFR">Delivery - VFR</a></p>
-	<br>
-	<a href="#toc" style="font-size: 120%">Table of Contents</a>
 	
 	<h3 id="DEL_TEMP_IFR_YES">*************** Delivery - IFR with radar (APP/DEP online) ***************</h3>
-	<p><b><i><u>Aircraft Callsign</u></i></b>, Position callsign,</p>
-	<p><b>C</b> Cleared to (<i><u>Destination</u></i>) Airport,</p>
-	<p><b>R</b> via Radar Vectors (<b><u><i>VOR/FIX</i></u></b>), then as filed,</p>
-	<p><b>A</b> Maintain (<i>Initial Alt</i>),</p>
-	<p>&nbsp;&nbsp;&nbsp;&nbsp;Expect Flight Level (<b><i><u>###</u></i></b>) 1-0 minutes after departure,</p>
-	<p><b>F</b> Departure Frequency (<u><i>###.##</i></u>),</p>
-	<p><b>T</b> Squawk <b><i><u>####</u></i></b>.</p>
-	<p><i>Wait for READBACK</i></p>
-	<br>
-	<p>(<b><i><u>Aircraft Callsign</u></i></b>), Readback Correct,</p>
-	<p>"ALTIMETER (<i>####</i>)"   or "Info (ATIS) is current, let me know when you have it" or "Thanks for Info (ATIS)" if they called up with Atis</p>
-	<p>Expect Runway (____)</p>
-	<p>Push and start at your discression</p>
-	<p>Advise ready to taxi golding short of (point / taxiway)</p>
-	
-	<br>
-	<p><a href="#Templates">Templates</a></p>
-	<p><a href="#DEL_TEMP_VFR">Delivery - VFR</a></p>
+	<button type="button" class="collapsible">IFR w/ radar</button>
+	<div class="content">
+		<p><b><i><u>Aircraft Callsign</u></i></b>, Position callsign,</p>
+		<p><b>C</b> Cleared to (<i><u>Destination</u></i>) Airport,</p>
+		<p><b>R</b> via Radar Vectors (<b><u><i>VOR/FIX</i></u></b>), then as filed,</p>
+		<p><b>A</b> Maintain (<i>Initial Alt</i>),</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;Expect Flight Level (<b><i><u>###</u></i></b>) 1-0 minutes after departure,</p>
+		<p><b>F</b> Departure Frequency (<u><i>###.##</i></u>),</p>
+		<p><b>T</b> Squawk <b><i><u>####</u></i></b>.</p>
+		<p><i>Wait for READBACK</i></p>
+		<br>
+		<p>(<b><i><u>Aircraft Callsign</u></i></b>), Readback Correct,</p>
+		<p>"ALTIMETER (<i>####</i>)"   or "Info (ATIS) is current, let me know when you have it" or "Thanks for Info (ATIS)" if they called up with Atis</p>
+		<p>Expect Runway (____)</p>
+		<p>Push and start at your discression</p>
+		<p>Advise ready to taxi golding short of (point / taxiway)</p>
+
+		<br>
+		<p><a href="#Templates">Templates</a></p>
+		<p><a href="#DEL_TEMP_VFR">Delivery - VFR</a></p>
+		
+	</div>
 
 	<h3 id="DEL_TEMP_IFR_SID">*************** Delivery - IFR SID with radar (APP/DEP online) ***************</h3>
-	<p><b><i><u>Aircraft Callsign</u></i></b>, Position callsign,</p>
-	<p><b>C</b> Cleared to (<i><u>Destination</u></i>) Airport,</p>
-	<p><b>R</b> via the <b><u><i>ABCDE3</i></u></b> <i>Departure</i>, ZYXWV <i>transition</i>, then as filed,</p>
-	<p><b>A</b> Maintain (<i>Initial Alt</i>),</p>
-	<p>&nbsp;&nbsp;&nbsp;&nbsp;Expect Flight Level (<b><i><u>###</u></i></b>) 1-0 minutes after departure,</p>
-	<p><b>F</b> Departure Frequency (<u><i>###.##</i></u>),</p>
-	<p><b>T</b> Squawk <b><i><u>####</u></i></b>.</p>
-	<p><i>Wait for READBACK</i></p>
-	<br>
-	<p>(<b><i><u>Aircraft Callsign</u></i></b>), Readback Correct,</p>
-	<p>"ALTIMETER (<i>####</i>)"   or "Info (ATIS) is current, let me know when you have it" or "Thanks for Info (ATIS)" if they called up with Atis</p>
-	<p>Expect Runway (____)</p>
-	<p>Push and start at your discression</p>
-	<p>Advise ready to taxi golding short of (point / taxiway)</p>
+	<button type="button" class="collapsible">SID w/ radar</button>
+	<div class="content">
+		<p><b><i><u>Aircraft Callsign</u></i></b>, Position callsign,</p>
+		<p><b>C</b> Cleared to (<i><u>Destination</u></i>) Airport,</p>
+		<p><b>R</b> via the <b><u><i>ABCDE3</i></u></b> <i>Departure</i>, ZYXWV <i>transition</i>, then as filed,</p>
+		<p><b>A</b> Maintain (<i>Initial Alt</i>),</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;Expect Flight Level (<b><i><u>###</u></i></b>) 1-0 minutes after departure,</p>
+		<p><b>F</b> Departure Frequency (<u><i>###.##</i></u>),</p>
+		<p><b>T</b> Squawk <b><i><u>####</u></i></b>.</p>
+		<p><i>Wait for READBACK</i></p>
+		<br>
+		<p>(<b><i><u>Aircraft Callsign</u></i></b>), Readback Correct,</p>
+		<p>"ALTIMETER (<i>####</i>)"   or "Info (ATIS) is current, let me know when you have it" or "Thanks for Info (ATIS)" if they called up with Atis</p>
+		<p>Expect Runway (____)</p>
+		<p>Push and start at your discression</p>
+		<p>Advise ready to taxi golding short of (point / taxiway)</p>
+
+
+		<br>
+		<p><a href="#Templates">Templates</a></p>
+		<p><a href="#DEL_TEMP_VFR">Delivery - VFR</a></p>
 	
-	
+	</div>
+		
 	<br>
-	<p><a href="#Templates">Templates</a></p>
-	<p><a href="#DEL_TEMP_VFR">Delivery - VFR</a></p>
-	
-	<br>
-	<a href="#toc" style="font-size: 120%">Table of Contents</a>
 	
 	<h3 id="DEL_TEMP_VFR">*************** Delivery - VFR ***************</h3>
 	
-	<p>Maintain VFR at or below (<b><i><u>Altitude</u></i></b>), <i>(025 for props 045 for jets initially)</i></p>
-	<p><b>F</b> Departure Frequency (<u><i>###.##</i></u>),</p>
-	<p><b>T</b> Squawk <b><i><u>####</u></i></b>.</p>
-	<p><i>Wait for READBACK</i></p>
-	<br>
-	<p>(<b><i><u>Aircraft Callsign</u></i></b>), Readback Correct,</p>
-	<p>"ALTIMETER (<i>####</i>)"   or "Info (ATIS) is current, let me know when you have it" or "Thanks for Info (ATIS)" if they called up with Atis</p>
-	<p>Expect Runway (____)</p>
-	<p>Push and start at your discression</p>
-	<p>Advise ready to taxi golding short of (point / taxiway)</p>
-	<br>
+	<button type="button" class="collapsible">VFR</button>
+	<div class="content">
+	
+		<p>Maintain VFR at or below (<b><i><u>Altitude</u></i></b>), <i>(025 for props 045 for jets initially)</i></p>
+		<p><b>F</b> Departure Frequency (<u><i>###.##</i></u>),</p>
+		<p><b>T</b> Squawk <b><i><u>####</u></i></b>.</p>
+		<p><i>Wait for READBACK</i></p>
+		<br>
+		<p>(<b><i><u>Aircraft Callsign</u></i></b>), Readback Correct,</p>
+		<p>"ALTIMETER (<i>####</i>)"   or "Info (ATIS) is current, let me know when you have it" or "Thanks for Info (ATIS)" if they called up with Atis</p>
+		<p>Expect Runway (____)</p>
+		<p>Push and start at your discression</p>
+		<p>Advise ready to taxi golding short of (point / taxiway)</p>
+		<br>
 
-	<p><b>SVFR</b> - 1SM vis, stay out of the clouds</p>
-	<p>Cleared out of the (airport) class (class). fly (Direction) of (airport) airport at or below (alt below 10k)</p>
-	<br>
+		<p><b>SVFR</b> - 1SM vis, stay out of the clouds</p>
+		<p>Cleared out of the (airport) class (class). fly (Direction) of (airport) airport at or below (alt below 10k)</p>
+		<br>
 
-	<p><b>Pattern work</b></p>
-	<p><b><i><u>Aircraft Callsign</u></i></b>, Position callsign,</p>
-	<p>VFR pattern work approved at or below 2500</p>
-	<p>Advise ready to taxi</p>
+		<p><b>Pattern work</b></p>
+		<p><b><i><u>Aircraft Callsign</u></i></b>, Position callsign,</p>
+		<p>VFR pattern work approved at or below 2500</p>
+		<p>Advise ready to taxi</p>
+
+
+		<br>
+		<p><a href="#Templates">Templates</a></p>
+		<p><a href="#DEL_TEMP_VFR">Delivery - VFR</a></p>
 	
-	
+	</div>
+		
 	<br>
-	<p><a href="#Templates">Templates</a></p>
-	<p><a href="#DEL_TEMP_VFR">Delivery - VFR</a></p>
-	
-	<br>
-	<a href="#toc" style="font-size: 120%">Table of Contents</a>
 	
 	
 	<h3 id="GND_TEMP">*************** Ground Taxi ***************</h3>
-	<p>(<b><i><u>Aircraft Callsign</u></i></b>)</p>
-	<p>Runway (<b><i>RWY</i></b>) Taxi VIA (_____)</p>
-	<p><b>*</b><i>Make use of "Hold short runway <b><i><u>X</u></i></b>" and "cross runway <b><i><u>X</u></i></b>" as nessasary</i><b>*</b></p>
-	<p><b>*</b><i>Remember to ask controllers above for active runway crossings</i><b>*</b></p>
-	<p><b>*</b><i>Remember to inform above controllers of completed runway crossings</i><b>*</b></p>
-	<p><b>*</b><i>Remember to tell an aircraft to contact an above controller and send the aircraft's strip</i><b>*</b></p>
-	<p><b>*</b><i>Remember to check if aircraft are squawking mode C and correct code</i><b>*</b></p>
 	
-	<br>
-	<a href="#toc" style="font-size: 120%">Table of Contents</a>
+	<button type="button" class="collapsible">Taxi</button>
+	<div class="content">
+	
+		<p>(<b><i><u>Aircraft Callsign</u></i></b>)</p>
+		<p>Runway (<b><i>RWY</i></b>) Taxi VIA (_____)</p>
+		<p><b>*</b><i>Make use of "Hold short runway <b><i><u>X</u></i></b>" and "cross runway <b><i><u>X</u></i></b>" as nessasary</i><b>*</b></p>
+		<p><b>*</b><i>Remember to ask controllers above for active runway crossings</i><b>*</b></p>
+		<p><b>*</b><i>Remember to inform above controllers of completed runway crossings</i><b>*</b></p>
+		<p><b>*</b><i>Remember to tell an aircraft to contact an above controller and send the aircraft's strip</i><b>*</b></p>
+		<p><b>*</b><i>Remember to check if aircraft are squawking mode C and correct code</i><b>*</b></p>
+	
+	</div>
 <br>
 
 	<h3 id="TWR_TEMP">*************** Tower Templates ***************</h3>
@@ -392,7 +429,6 @@
 	<p>SWEET LOCK SWEET COMMS - locked onto nav beacon w/ radio coms with the specified facility.</p>
 	
 	<br>
-	<a href="#toc" style="font-size: 120%">Table of Contents</a>
 	
 	<h2 id="SOPs">------------------------------ Standard Operating Procedures ------------------------------</h2>
 	
@@ -401,18 +437,22 @@
 	<p><i>*Fill in info here*</i></p>
 	
 	<h5 id="Opening_a_position">Opening a position</h5>
+	<button type="button" class="collapsible">Opening</button>
+	<div class="content">
 	<p>The following steps will be completed when opening a position at vZID:</p>
-	<ol>
-		<li>Open your controller client and AFV.</li>
-		<li>Set up the Communications panel per the vZID Position Table.</li>
-		<li>Log on to the network, but do not prime on frequency.</li>
-		<li>Ask for a position <a href="#Position_Relief">briefing</a> (if applicable).</li>
-		<li>After the position brief is completed the controller holding responsibility for the position will relinquish control to the new controller.</li>
-		<li>Prime on frequency.</li>
-		<li>When opening a CTR position, if there is a neighboring CTR position staffed, announce on the ATC Chat the position is open. If splitting the position announce the split information on ATC Chat. Lower positions will not announce on the ATC Chat. Exceptions to this step will be indicated in individual facilities SOPs.</li>
-	</ol>
-	
+		<ol>
+			<li>Open your controller client and AFV.</li>
+			<li>Set up the Communications panel per the vZID Position Table.</li>
+			<li>Log on to the network, but do not prime on frequency.</li>
+			<li>Ask for a position <a href="#Position_Relief">briefing</a> (if applicable).</li>
+			<li>After the position brief is completed the controller holding responsibility for the position will relinquish control to the new controller.</li>
+			<li>Prime on frequency.</li>
+			<li>When opening a CTR position, if there is a neighboring CTR position staffed, announce on the ATC Chat the position is open. If splitting the position announce the split information on ATC Chat. Lower positions will not announce on the ATC Chat. Exceptions to this step will be indicated in individual facilities SOPs.</li>
+		</ol>
+	</div>
 	<h5 id="Closing_a_position">Closing a position</h5>
+	<button type="button" class="collapsible">Closing</button>
+	<div class="content">
 	<p>When Closing a facility, the following procedure shall be followed:</p>
 	<ol>
 		<li>Ask other controllers in TS if anyone is interested in relieving your position. If not, then continue to step 2</li>
@@ -425,11 +465,14 @@
 			<li>If controllers are online above (or maybe below too) provide a <a href="#Position_Relief">briefing</a></li>
 		</ol>
 	</ol>
+	</div>
 	<br>
 	<a href="#toc" style="font-size: 120%">Table of Contents</a>
 	
 	
 	<h5 id="Position_Relief">Position Relief Briefing Guide</h5>
+	<button type="button" class="collapsible">Briefing</button>
+	<div class="content">
 	<ol>
 		<li>Airport Consitions and Status</li>
 			<ol>
@@ -479,10 +522,14 @@
 				<li>Aircraft holding or standing by for service</li>
 			</ol>
 	</ol>
+	</div>
 	<br>
 	<a href="#toc" style="font-size: 120%">Table of Contents</a>
 	
 	<h3 id="SOP_CVG">*************** CVG SOP Info ***************</h3>
+	
+	<button type="button" class="collapsible">CVG</button>
+	<div class="content">
 	
 	<p>Put this in CVG ATIS at all times:</p>
 	<q>New Scenery Available for CVG. The old runways 36L - 18R is the new 36 and 18 Center.</q>
@@ -583,12 +630,15 @@
 	<p>Satellite Radar &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; CVG_L_DEP &nbsp; | 1L &nbsp;| 121.000</p>
 	<p>Wildcat Departure West &nbsp; &nbsp; &nbsp; |&nbsp; CVG_W_DEP &nbsp;| 1W | 126.650</p>
 	<p>Bearcat Departure East &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp;CVG_E_DEP &nbsp; &nbsp;|&nbsp; 1B | 128.700</p>
-	
+	</div>
 	
 	<br>
 	<a href="#toc" style="font-size: 120%">Table of Contents</a>
 	
 	<h3 id="SOP_IND">*************** IND SOP Info ***************</h3>
+	
+	<button type="button" class="collapsible">IND</button>
+	<div class="content">
 	
 	<p><i>*Fill in info here*</i></p>
 	
@@ -644,10 +694,15 @@
 	<p>Departure East &nbsp; &nbsp; &nbsp; &nbsp;| &nbsp;IND_E_DEP &nbsp;| 3E | 124.950</p>
 	<p>Departure West &nbsp; &nbsp; &nbsp; |&nbsp; IND_W_DEP &nbsp;| 3W | 119.050</p>
 	
+	</div>
+		
 	<br>
 	<a href="#toc" style="font-size: 120%">Table of Contents</a>
 	
 	<h3 id="SOP_SDF">*************** SDF SOP Info ***************</h3>
+	
+	<button type="button" class="collapsible">SDF</button>
+	<div class="content">
 	
 	<p>No Special VFR fixed wing operations</p>
 	
@@ -696,6 +751,9 @@
 			<li>Ground Control East and West combines into Ground East</li>
 		</ol>
 	</ol>
+		
+	</div>
+		
 	<br>
 	<a href="#toc" style="font-size: 120%">Table of Contents</a>
 	
@@ -707,6 +765,10 @@
 	<a href="#toc" style="font-size: 120%">Table of Contents</a>
 	
 	<h2 id="controls">------------------------------ Controls ------------------------------</h2>
+	
+	<button type="button" class="collapsible">Controls</button>
+	<div class="content">
+	
 	<h5>Function Commands</h5>
 	
 	<p><b>F1 &lt;asel&gt;</b> Toggle full/partial data tag</p>
@@ -762,6 +824,8 @@
 <p><b>Alt Click flight strip</b> to delete flight strip or seperator</p>
 <p><b>ALT Click aircraft</b> to add strip to the bay</p>
 
+		
+		</div>
 	<br>
 	<a href="#toc" style="font-size: 120%">Table of Contents</a>
 	
@@ -769,6 +833,10 @@
 	
 
 	<h2 id="commands">------------------------------ Commands ------------------------------</h2>
+	
+	<button type="button" class="collapsible">Commands</button>
+	<div class="content">
+	
 	<p><b>.wx</b> or <b>.metar</b> &lt;ICAO&gt;</p>
 	<p><b>.atis</b> for own atis or .atis [callsign] for someone elses</p>
 	<p><b>.transfer &lt;sectorID&gt;</b> to handoff all targets to controller</p>
@@ -779,9 +847,14 @@
 	<br>
 	<p id="bad_cruize"><b>.cruzh &lt;lower alt&gt; &lt;higher alt&gt;</b> - (In FL) send a msg to someone about wrong altitude for direction of flight with 2 suggestions</p>
 	<p><b>.cruzl &lt;lower alt&gt; &lt;higher alt&gt;</b> - (below FL) send a msg to someone about wrong altitude for direction of flight with 2 suggestions</p>
+		
+	</div>
 	
 	<br>
 <h4 id="PDC">*************** PRE-DEPARTURE CLEARANCES (PDCs) ***************</h4>
+	
+	<button type="button" class="collapsible">PDC</button>
+	<div class="content">
 
 <h5>-- Message 1 ---</h5>
 	<p><b>.pdcsid &lt;frequency using identifier (ex: 2W)&gt;</b> - PDC with a SID</p>
@@ -801,11 +874,17 @@
 	
 	<br>
 <p><b>.log &lt;FILENAME&gt;</b></p>
+		
+	</div>
 	
 	<br>
 	<a href="#toc" style="font-size: 120%">Table of Contents</a>
 	
 	<h3 id="Alias">*************** Alias Commands for Text pilots *************** </h3>
+	
+	<button type="button" class="collapsible">Alias commands</button>
+	<div class="content">
+	
 	<h4 id="Alias_cDEL">*************** Clearance Delivery Alias commands ***************</h4>
 	<p><b>.cor</b> - Clearance on request, Standby</p>
 	<p><b>.cor1 &lt;number&gt;</b> - Clearance on request, number $1, standby</p>
@@ -879,7 +958,9 @@
 
 	<h5 id="Alias_TWR">Tower Aliases</h5>
 	<p><i>*Fill in at a later date</i></p>
-	
+
+	</div>
+		
 	<br>
 	<a href="#toc" style="font-size: 120%">Table of Contents</a>
 	
@@ -904,28 +985,17 @@
 	<p>Send aircraft over to the departure controller no later than a mile off the runway</p>
 	<p>Preferably as soon as you see positive climb rate</p>
 	
-	<br>
-
-	<p id="missed_slant">For missing slant code:</p>
-<p>"What are your navigation capabilities?"</p>
 	
 	<br>
 <p id="Amended_PM">PM in VRC:</p>
 <p>right click on an aircraft</p>
 <p>"I have an admendment for your route. Advise if you are able to accept.""</p>
-<p>"I will amend your flight plan. The rest of your clearance remains unchanged"</p>
-	
-	<br>
-<p>A cloud ceiling is broken (BKN) or OVC</p>
-<p>For voice atis. preface with ceiling (ex: ceiling bkn 011 ovc 055)</p>
 		
 	<br>
 <p id="Squawking">Squawking normal. star trail.</p>
 <p>not mode C. triangle trail.</p>
 <p>squawking C and flashing (or 0000) = incorrect squawk code</p>
-	
-	<br>
-	<p>letters behind aircraft - based on current controller's arts tag from POF file</p>
+<p>Squaking VFR without an assigned code and mode C = squares</p>
 	
 	<br>
 <p>leave out un-nessasary words (initially)</p>
@@ -948,14 +1018,14 @@
 
 	
 	<h5 id="Airlines">Airlines</h5>
-	<p>AAL | American</p>
+	<button type="button" class="collapsible">Airlines</button>
+	<div class="content">
 	<p>AAY | Allegiant</p>
 	<p>ACA | Air Canada</p>
 	<p>AFL | Aroflot</p>
 	<p>AMX | AeroMexico</p>
 	<p>ANA | All Nippon</p>
 	<p>APX | Capair</p>
-	<p>ASA | Alaska</p>
 	<p>ATN | Air Transport</p>
 	<p>AWE | Cactus (US airways)</p>
 	<p>BAW | Speedbird</p>
@@ -964,11 +1034,8 @@
 	<p>CMP | Copa</p>
 	<p>DAL | Delta</p>
 	<p>DCM | Dot Com</p>
-	<p>DHL | DHL</p>
 	<p>DLH | Lufthansa</p>
 	<p>EAL | Eastern</p>
-	<p>EDV | Endevor</p>
-	<p>EGH | ?</p>
 	<p>EJA | Exec Jet</p>
 	<p>ETX | Elite</p>
 	<p>FDX | Fedex</p>
@@ -977,15 +1044,12 @@
 	<p>GTI | Giant (Atlas Air)</p>
 	<p>JBU | Jet Blue</p>
 	<p>JIA | Blue Streak</p>
-	<p>LJT | Learjet?</p>
+	<p>LJT | Learjet</p>
 	<p>MTN | Mountain</p>
 	<p>MXY | Moxy</p>
 	<p>NKS | Spirit Wings</p>
 	<p>PAA | "Clipper" Pan Am </p>
-	<p>PAY | Pacific?</p>
-	<p>PFL | Proflight?</p>
 	<p>QFA | Quantas</p>
-	<p>RCH | Reach (Military)</p>
 	<p>RPA | "Brickyard" Republic Airways</p>
 	<p>SCX | Sun Country</p>
 	<p>SMX | AliExpress</p>
@@ -994,22 +1058,19 @@
 	<p>SWG | Sunwing</p>
 	<p>SWR | Swiss</p>
 	<p>SXS | Sun Express</p>
-	<p>TPC | Pilot Club</p>
 	<p>TSC | Air Transat</p>
 	<p>UAL | United</p>
 	<p>UCA | Commuter</p>
-	<p>UPS | UPS</p>
 	<p>VIR | Virgin </p>
 	<p>VPC | Alpaca</p>
-	<p>WAT | Walker or Wings Air</p>
+	<p>WAT | Walker</p>
 	<p>WJA | WestJet</p>
 	<p>WN &nbsp;| Southwest IATA code (Inform pilots WN is the IATA code, SWA is the ICAO code)</p>
 	<p>WWA | Westwind</p>
 	<p>WWW | Janet</p>
-	<p>XAA | Aeronautical Radio</p>
 	
 	
-	
+	</div>
 	
 
 	<br>
@@ -1061,6 +1122,23 @@
 	<br>
 	<br>
 	<br>
+	
+	<script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+		var content = this.nextElementSibling;
+		if (content.style.maxHeight){
+		  content.style.maxHeight = null;
+		} else {
+		  content.style.maxHeight = content.scrollHeight + "px";
+		}
+	  });
+	}
+	</script>
 	
 	
 </body>
