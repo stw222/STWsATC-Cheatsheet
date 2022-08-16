@@ -356,78 +356,103 @@
 
 	<h3 id="TWR_TEMP">*************** Tower Templates ***************</h3>
 	
-	<br>
-	<p><b>Rnav Departure</b></p>
-	<p>RNAV to (Fix), Wind 123@12, Runway (Number), Cleared for Takeoff</p>
+	<button type="button" class="collapsible">Tower</button>
+	<div class="content">
 	
 	<br>
-	<p><b>Non-RNAV Departure</b></p>
-	<p>Fly Runway Heading (Or other heading), Wind 123@12, Runway (Number), Cleared for Takeoff</p>
-	
-	<br>
-	<p><b>Aircraft Departed</b></p>
-	<p>(Callsign), Contact (something) Departure, (Optional Frequency)</p>
-	
-	<br>
-	<p><b>Landing</b></p>
-	<p>(Callsign), Wind 123@12, Cleared to land (number in sequence)</p>
-	<p><i>Can include Number in the approach line or aircraft departing before arrival</i></p>
-	
-	<br>
-	<p><b>Pattern work</b></p>
-	<p>"(Callsign), you are following a (aircraft type) (Part of the pattern), report in sight"</p>
-	<p>"Maintain visual seperation from the (aircraft type), Runway # cleared to land number #"</p>
-	<br>
+		<p><b>Rnav Departure</b></p>
+		<p>RNAV to (Fix), Wind 123@12, Runway (Number), Cleared for Takeoff</p>
 
-	<p><b>Circling Approach</b></p>
-	<p>Circle to runway (Number)</p>
-	<p>Circle (Direction using cardinal directions) of the airport/runway for a left/right base/downwind to runway (number)</p>
+		<br>
+		<p><b>Non-RNAV Departure</b></p>
+		<p>Fly Runway Heading (Or other heading), Wind 123@12, Runway (Number), Cleared for Takeoff</p>
+
+		<br>
+		<p><b>Aircraft Departed</b></p>
+		<p>(Callsign), Contact (something) Departure, (Optional Frequency)</p>
+
+		<br>
+		<p><b>Landing</b></p>
+		<p>(Callsign), Wind 123@12, Cleared to land (number in sequence)</p>
+		<p><i>Can include Number in the approach line or aircraft departing before arrival</i></p>
+
+		<br>
+		<p><b>Pattern work</b></p>
+		<p>"(Callsign), you are following a (aircraft type) (Part of the pattern), report in sight"</p>
+		<p>"Maintain visual seperation from the (aircraft type), Runway # cleared to land number #"</p>
+		<p>Ask for flight following if leaving the pattern</p>
+		<p>Give a squawk when departing the pattern if they dont already have one</p>
+
+		<br>
+		<p><b>Helicopters</b></p>
+		<p>"Departure from the ramp at your own risk"</p>
+		<p>"Report landing assured"</p>
+		<p>Airtaxi direct</p>
+		<p>Hovertaxi via (Taxiway)</p>
+
+		<br>
+
+		<p><b>Circling Approach</b></p>
+		<p>Circle to runway (Number)</p>
+		<p>Circle (Direction using cardinal directions) of the airport/runway for a left/right base/downwind to runway (number)</p>
 	
+	</div>
+		
 	<br>
 	<h5 id="Military_TWR">Military</h5>
-	<p><b>Overhead Break</b></p>
-	<p>"Report Initial" (This means on approach)</p>
-	<p>"Report break, (Right or left), (Where to break)" when they report initial</p>
-	<p>Clear for the option after reporting break</p>
-	<p><i>*Break points are approach end, midfield, departure end*</i></p>
-	<br>
 	
-	<p><b>Unrestricted Climb</b></p>
-	<p>Unrestricted Climb to (Altitude) approved. Cleared for takeoff. Change to departure</p>
-	<p><i>Coordinate departure with departure controller</i></p>
-	<br>
+	<button type="button" class="collapsible">Military</button>
+	<div class="content">
+	
+		<p><b>Takeoff</b></p>
+		<p>For intersection departures, include runway remaining</p>
+		<br>
 
-	<p><b>High Key Departure</b></p>
-	<p>High Key Departure approved. (Restrictions). Make (Left or right) Closed Traffic. Report High Key. Cleared for takeoff.</p>
-	<p><i>*Coordinate high key departures that exit local's area with departure*</i></p>
-	<p><i>Report (Some Point) or Remain at or (Below or above). Remain within X DME.</i></p>
-	<br>
-	<img src="img/Highkey-lowkey.png" alt="High key and low key positions" height="250px">
-	<br>
-	
-	<p><b>Carrier Break</b></p>
-	<p>Report initial (Runway) [[Optional:]] Expect a (Right) break <i>*Default is left break*</i></p>
-	<p>Initial: Carrier Break approved <i>*If not issued and not left: Right carrier break approved*</i></p>
-	<p>Check gear down, (Wind), runway (runnway) cleared to land</p>
-	<br>
-	<img src="img/carrier break.png" alt="Carrier break diagram" height="350px">
-	<br>
+		<p><b>Overhead Break</b></p>
+		<p>"Report Initial" (This means on approach)</p>
+		<p>"Report break, (Right or left), (Where to break)" when they report initial</p>
+		<p>Clear for the option after reporting break</p>
+		<p><i>*Break points are approach end, midfield, departure end*</i></p>
+		<br>
 
-	<p><b>Landing</b></p>
-	<p>Check Gear down, Runway (Number) Cleared for the option / Cleared to land</p>
-	<br>
+		<p><b>Unrestricted Climb</b></p>
+		<p>Unrestricted Climb to (Altitude) approved. Cleared for takeoff. Change to departure</p>
+		<p><i>Coordinate departure with departure controller</i></p>
+		<br>
+
+		<p><b>High Key Departure</b></p>
+		<p>High Key Departure approved. (Restrictions). Make (Left or right) Closed Traffic. Report High Key. Cleared for takeoff.</p>
+		<p><i>*Coordinate high key departures that exit local's area with departure*</i></p>
+		<p><i>Report (Some Point) or Remain at or (Below or above). Remain within X DME.</i></p>
+		<br>
+		<img src="img/Highkey-lowkey.png" alt="High key and low key positions" height="250px">
+		<br>
+
+		<p><b>Carrier Break</b></p>
+		<p>Report initial (Runway) [[Optional:]] Expect a (Right) break <i>*Default is left break*</i></p>
+		<p>Initial: Carrier Break approved <i>*If not issued and not left: Right carrier break approved*</i></p>
+		<p>Check gear down, (Wind), runway (runnway) cleared to land</p>
+		<br>
+		<img src="img/carrier break.png" alt="Carrier break diagram" height="350px">
+		<br>
+
+		<p><b>Landing</b></p>
+		<p>Check Gear down, Runway (Number) Cleared for the option / Cleared to land</p>
+		<br>
+
+		<p><b>Terms</b></p>
+		<p>ANGELS - thousands of feet</p>
+		<p>BINGO - Emergency Fuel situation</p>
+		<p>BRC - Ship/runway magnetic heading (Base Recovery Course)</p>
+		<p>CATCC - Carrier Air Traffic Control Center</p>
+		<p>CLEAN UP - raise hear, flaps, hook</p>
+		<p>DIRTY UP - lower gear, flaps, hook</p>
+		<p>PIGEONS - breaing and distance to an object "PIGEONS 270 for 34" (270 degrees, 34 miles)</p>
+		<p>POPEYE - Aircraft in IMC. Ex: "OPOEYE ANGELS 18"</p>
+		<p>SWEET LOCK SWEET COMMS - locked onto nav beacon w/ radio coms with the specified facility.</p>
 	
-	<p><b>Terms</b></p>
-	<p>ANGELS - thousands of feet</p>
-	<p>BINGO - Emergency Fuel situation</p>
-	<p>BRC - Ship/runway magnetic heading (Base Recovery Course)</p>
-	<p>CATCC - Carrier Air Traffic Control Center</p>
-	<p>CLEAN UP - raise hear, flaps, hook</p>
-	<p>DIRTY UP - lower gear, flaps, hook</p>
-	<p>PIGEONS - breaing and distance to an object "PIGEONS 270 for 34" (270 degrees, 34 miles)</p>
-	<p>POPEYE - Aircraft in IMC. Ex: "OPOEYE ANGELS 18"</p>
-	<p>SWEET LOCK SWEET COMMS - locked onto nav beacon w/ radio coms with the specified facility.</p>
-	
+	</div>
+		
 	<br>
 	
 	<h2 id="SOPs">------------------------------ Standard Operating Procedures ------------------------------</h2>
@@ -1014,6 +1039,13 @@
 
 	<p>Vstars controllers might have auto tag aircraft on, so ask if they want a squak on Pattern work traffic</p>
 	<br>
+	
+	<p>Generally, tower in ZID controls up to 3000 on the arrival end and 5000 on the departure end of the field.</p>
+	<br>
+
+	<p>Speedlimit is usually 200 knots in Charlie airspace</p>
+	<br>
+
 
 
 	
