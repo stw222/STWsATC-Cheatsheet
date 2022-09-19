@@ -152,7 +152,6 @@
 		<ul>
 			<li><a href="#DEL_TEMP_IFR_NO">Delivery Template</a></li>
 			<ul>
-				<li><a href="#DEL_TEMP_IFR_NO">Delivery - IFR no radar</a></li>
 				<li><a href="#DEL_TEMP_IFR_YES">Delivery - IFR with radar</a></li>
 				<li><a href="#DEL_TEMP_IFR_SID">Delivery - IFR SID with radar</a></li>
 				<li><a href="#DEL_TEMP_VFR">Delivery - VFR</a></li>
@@ -222,44 +221,15 @@
 	<p><a href="#DEL_TEMP_VFR">Delivery - VFR</a></p>
 	<br>
 	
-	<h3 id="DEL_TEMP_IFR_NO">*************** Delivery - IFR no radar (APP/DEP not online) ***************</h3>
-	<button type="button" class="collapsible">IFR no radar</button>
-	<div class="content">
-		<p><b><i><u>Aircraft Callsign</u></i></b>, Position callsign,</p>
-		<p><b>C</b> Cleared to (<i><u>Destination</u></i>) Airport,</p>
-		<p><b>R</b> Direct (<b><u><i>VOR/FIX</i></u></b>), then as filed,</p>
-		<p><b>A</b> Maintain (<i>Initial Alt</i>),</p>
-		<!-- This page requires lots of escape characters. a list of them here: https://mateam.net/html-escape-characters/ -->
-		<p>&nbsp;&nbsp; &nbsp;Expect Flight Level (<b><i><u>###</u></i></b>) 1-0 minutes after departure,</p>
-		<p><b>F</b> Departure Frequency (<b><u><i>122.8</i></u></b>),</p>
-		<p><b>T</b> Squawk <b><i><u>####</u></i></b>.</p>
-		<p><i>Wait for READBACK</i></p>
-		<br>
-		<p>(<b><i><u>Aircraft Callsign</u></i></b>), Readback Correct,</p>
-		<p>"ALTIMETER (<i>####</i>)"   or "Info (ATIS) is current, let me know when you have it" or "Thanks for Info (ATIS)" if they called up with Atis</p>
-		<p>Expect Runway (____)</p>
-		<p>Push and start at your discression</p>
-		<p>Advise ready to taxi golding short of (point / taxiway)</p>
-		
-	
-	
-		<br>
-		<p><a href="#Templates">Templates</a></p>
-		<p><a href="#DEL_TEMP_VFR">Delivery - VFR</a></p>
-		
-	</div>
-		
-	<br>
-	
-	<h3 id="DEL_TEMP_IFR_YES">*************** Delivery - IFR with radar (APP/DEP online) ***************</h3>
-	<button type="button" class="collapsible">IFR w/ radar</button>
+	<h3 id="DEL_TEMP_IFR_YES">*************** Delivery - IFR ***************</h3>
+	<button type="button" class="collapsible">IFR</button>
 	<div class="content">
 		<p><b><i><u>Aircraft Callsign</u></i></b>, Position callsign,</p>
 		<p><b>C</b> Cleared to (<i><u>Destination</u></i>) Airport,</p>
 		<p><b>R</b> via Radar Vectors (<b><u><i>VOR/FIX</i></u></b>), then as filed,</p>
 		<p><b>A</b> Maintain (<i>Initial Alt</i>),</p>
 		<p>&nbsp;&nbsp;&nbsp;&nbsp;Expect Flight Level (<b><i><u>###</u></i></b>) 1-0 minutes after departure,</p>
-		<p><b>F</b> Departure Frequency (<u><i>###.##</i></u>),</p>
+		<p><b>F</b> Departure Frequency (<u><i>###.##</i></u>), <i>(Departure offline if no radar or center online)</i></p>
 		<p><b>T</b> Squawk <b><i><u>####</u></i></b>.</p>
 		<p><i>Wait for READBACK</i></p>
 		<br>
@@ -325,7 +295,8 @@
 
 		<p><b>Pattern work</b></p>
 		<p><b><i><u>Aircraft Callsign</u></i></b>, Position callsign,</p>
-		<p>VFR pattern work approved at or below 2500</p>
+		<p>VFR pattern work approved</p>
+		<p><i>Squawk if applicable</i></p>
 		<p>Advise ready to taxi</p>
 
 
@@ -361,11 +332,11 @@
 	
 	<br>
 		<p><b>Rnav Departure</b></p>
-		<p>RNAV to (Fix), Wind 123@12, Runway (Number), Cleared for Takeoff</p>
+		<p>RNAV to (Fix), Runway (Number), Cleared for Takeoff, Wind 123@12</p>
 
 		<br>
 		<p><b>Non-RNAV Departure</b></p>
-		<p>Fly Runway Heading (Or other heading), Wind 123@12, Runway (Number), Cleared for Takeoff</p>
+		<p>Fly Runway Heading (Or other heading), Runway (Number), Cleared for Takeoff, Wind 123@12</p>
 
 		<br>
 		<p><b>Aircraft Departed</b></p>
@@ -373,13 +344,13 @@
 
 		<br>
 		<p><b>Landing</b></p>
-		<p>(Callsign), Wind 123@12, Cleared to land (number in sequence)</p>
+		<p>(Callsign), Cleared to land (number in sequence), Wind 123@12</p>
 		<p><i>Can include Number in the approach line or aircraft departing before arrival</i></p>
 
 		<br>
 		<p><b>Pattern work</b></p>
 		<p>"(Callsign), you are following a (aircraft type) (Part of the pattern), report in sight"</p>
-		<p>"Maintain visual seperation from the (aircraft type), Runway # cleared to land number #"</p>
+		<p>"Maintain visual seperation from the (aircraft type), Runway # cleared to land number #, Wind 123@12"</p>
 		<p>Ask for flight following if leaving the pattern</p>
 		<p>Give a squawk when departing the pattern if they dont already have one</p>
 
@@ -471,7 +442,8 @@
 	<div class="content">
 	<p>The following steps will be completed when opening a position at vZID:</p>
 		<ol>
-			<li>Open your controller client and AFV.</li>
+			<li>Open your controller client, AFV, vATIS (If applicable).</li>
+			<li>Look up the weather for airport flow and cloud ceilings. I prefer these websites: <a href= "https://metar-taf.com/">Metar-Taf</a> , <a href= "https://datis.clowd.io/">dATIS</a> , <a href= "https://www.meteoblue.com/">MeteoBlue for weather predictions</a></li>
 			<li>Set up the Communications panel per the vZID Position Table.</li>
 			<li>Log on to the network, but do not prime on frequency.</li>
 			<li>Ask for a position <a href="#Position_Relief">briefing</a> (if applicable).</li>
@@ -480,6 +452,8 @@
 			<li>When opening a CTR position, if there is a neighboring CTR position staffed, announce on the ATC Chat the position is open. If splitting the position announce the split information on ATC Chat. Lower positions will not announce on the ATC Chat. Exceptions to this step will be indicated in individual facilities SOPs.</li>
 		</ol>
 	</div>
+	<br>
+
 	<h5 id="Closing_a_position">Closing a position</h5>
 	<button type="button" class="collapsible">Closing</button>
 	<div class="content">
@@ -978,6 +952,8 @@
 	<p><b>.ramppd</b> - Taxi to the ramp pilot's discretion, this frequency</p>
 	<p><b>.mon &lt;frequency using identifier (ex: 2W)&gt;</b> - Monitor $radioname($1) on $freq($1)</p>
 	<p><b>.nfatc</b> - No further ATC services are available, frequency change to 122.80 approved. Have a good flight to $arr</p>
+		<br>
+
 	
 	<p><b>Ground Helis</b></p>
 	<p><b>.htaxi &lt;Runway&gt; &lt;Taxiway(s)&gt;</b> - Runway $uc($1), Hover taxi via $uc($2) $uc($3) $uc($4) $uc($5) and land.</p>
@@ -987,11 +963,36 @@
 	<br>
 
 	<h5 id="Alias_TWR">Tower Aliases</h5>
-	<p><i>*Fill in at a later date</i></p>
+	<p><b>.luaw</b> runway $uc($1), line up and wait.</p>
+	<p><b>.ctorh</b> Wind $wind($dep), altimeter $altim($dep), on departure fly runway heading, runway $uc($1), cleared for takeoff.</p>
+	<p><b>.ctornav</b> Wind $wind($dep), RNAV to $uc($1), runway $uc($2), cleared for takeoff.</p>
+<br>
 
-	</div>
-		
+	<p><b>.ctl</b> Wind $wind($arr), altimeter $altim($arr), runway $uc($1), cleared to land.</p>
+	<p><b>.ctlmil</b> Wind $wind($arr), altimeter $altim($arr), check wheels down, runway $uc($1), cleared to land</p>
+	<p><b>.optmil</b> Wind $wind($arr), check wheels down, runway $uc($1), cleared for the option</p>
+	<p><b>.cwt</b> Caution wake turbulence $1 </p>
+	<p><b>.ga</b> go around.</p>
+<br>
+
+	<p><b>.mapmrt</b> Copy missed approach, maintain $temp, make right traffic runway $uc($1)</p>
+	<p><b>.mapmlt</b> Copy missed approach, maintain $temp, make left traffic runway $uc($1)</p>
+	<p><b>.mapapp</b> Copy missed approach, fly runway heading, maintain $temp. Contact $uc($radioname($1)) on $freq($1)</p>
+	<p><b>.maph</b> copy missed approach, fly heading $1, climb and maintain $temp.</p>
+	<p><b>.exlg</b> Welcome to $arr, Exit let when able, Contact $radioname($1) on $freq($1) when clear of runway</p>
+	<p><b>.exrg</b> Welcome to $arr, Exit right when able, Contact $radioname($1) on $freq($1) when clear of runway</p>
+	<p><b>.fca</b> Frequency Change approved</p>
+<br>
+
+	<b>Tower VFR</b>
+	<p><b>.mrct</b> make right closed traffic runway $uc($1), report midfield until advised, Wind $wind($dep), runway $uc($1), cleared for takeoff</p>
+	<p><b>.mlct</b> make left closed traffic runway $uc($1), report midfield until advised, Wind $wind($dep), runway $uc($1), cleared for takeoff</p>
+	<p><b>.opt</b> Wind $wind($arr), runway $uc($1), cleared for the option.</p>
+	<p><b>.optns</b> Wind $wind($arr), runway $uc($1), cleared for the option except Stop and Go.</p>
+	<p><b>.tng</b> Wind $wind($arr), runway $uc($1), cleared touch and go.</p>
+		</div>
 	<br>
+		
 	<a href="#toc" style="font-size: 120%">Table of Contents</a>
 	
 	
@@ -1026,10 +1027,11 @@
 <p>not mode C. triangle trail.</p>
 <p>squawking C and flashing (or 0000) = incorrect squawk code</p>
 <p>Squaking VFR without an assigned code and mode C = squares</p>
+<p>Squawking and trail is another character - another controller is tracking them</p>
 	
 	<br>
 <p>leave out un-nessasary words (initially)</p>
-<p>advice higher controller when runway crossing complete</p>
+<p>advice higher controller when runway crossing complete (If you are ground)</p>
 	
 	<br>
 	<p>Subscribe to an atis:</p>
