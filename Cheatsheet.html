@@ -344,6 +344,8 @@
 		<br>
 		<p><b>Pattern work</b></p>
 		<p>"(Callsign), you are following a (aircraft type) (Part of the pattern), report in sight"</p>
+		<p>"traffic off your nose"</p>
+		<p>"traffic off your right wing"</p>
 		<p>"Maintain visual seperation from the (aircraft type), Runway # cleared to land number #, Wind 123@12"</p>
 		<p>Ask for flight following if leaving the pattern</p>
 		<p>Give a squawk when departing the pattern if they dont already have one</p>
@@ -429,6 +431,8 @@
 	
 	<h3 id="SOP_ZID">*************** General ZID SOP info ***************</h3>
 	
+	<button type="button" class="collapsible">Gen ZID SOP</button>
+	<div class="content">
 	<p><b>Currency:</b></p>
 	<p>Minimum 2 hours controlling per month</p>
 	<p>At least 50% of controlling time must be in your home ARTCC</p>
@@ -453,7 +457,7 @@
 		<li>GND .. 10nm</li>
 		<li>DEL .. 5nm</li>
 	</ul>
-	
+	</div>
 	
 	
 	<h5 id="Opening_a_position">Opening a position</h5>
@@ -554,7 +558,7 @@
 	<button type="button" class="collapsible">CVG</button>
 	<div class="content">
 	
-	<p>Put this in CVG ATIS at all times:</p>
+	<p>Put this in CVG ATIS at all times: (Really just some times since this is a decade old)</p>
 	<q>New Scenery Available for CVG. The old runways 36L - 18R is the new 36 and 18 Center.</q>
 	
 	<br>
@@ -570,7 +574,37 @@
 	<br>
 	<p>Normal operations are arriving on 18C and 18L</p>
 	<p>Departing on 27 (or sometimes 18L for cargo aircraft)</p>
+		
+	<br>
+	<p>Diverging headings off the runway:</p>
+	<p>+ / - 15 degrees (or 20 for easy math)</p>
+	<ul>
+		<li>18R +15/20 degrees right (200/205)</li>
+		<li>18C Runway Heading</li>
+		<li>18L -15/20 degrees left (165/170)</li>
+	</ul>
+	<ul>
+		<li>36L -15/20 degrees left (355/350)</li>
+		<li>36C Runway Heading</li>
+		<li>36L +15/20 degrees left (025/030)</li>
+	</ul>
+		<br>
+		<br>
 
+	<p>Missed Approaches</p>
+	<p>North flow:</p>
+	<p>36L - Climb 4000, 310 Heading, then 210...</p>
+	<p>36C - Climb 4000, Runway heading...</p>
+	<p>36R - Climb 4000, 360 heading, then 150...</p>
+	<p>Then send to final radar</p>
+	<br>
+	<p>South Flow</p>	
+	<p>18R - Climb 4000, 240 heading, then 350...</p>
+	<p>18C - Climb 4000, Runway Heading...</p>
+	<p>18L - Climb 4000, 120 heading, then 010...</p>
+	<p>Then send to final radar</p>
+		
+	<br>
 	<br>
 	<p>Parallel taxiways:</p>
 	<p>Further from the runway (E, S, J) for taxing departures</p>
@@ -583,6 +617,7 @@
 	<br>
 	<p>VFR aircraft require an explicit clearance out of the Class bravo</p>
 	<p>All VFR aircraft require a flight plan. CD can make one for them.</p>
+	<p>All VFR aircraft are cleared up to 5,500 initially (Jets and props)</p>
 	<p>Minimum information:</p>
 	<ul>
 		<li>Callsign</li>
@@ -1019,6 +1054,10 @@
 
 	<h2 id="other">------------------------------ Other ------------------------------</h2>
 	
+	<p>the LOA with ZTL has odd altitudes into KATL. DEL doesnt need to worry about it, Center does.</p>
+	<br>
+
+	
 <p id="Wake">Wake Turbulance Seperation (Radar)</p>
 	<img src="img/Radar_Wake_Separation.png" alt="Radar Wake Seperation" width="280px">
 	<br>
@@ -1049,7 +1088,6 @@
 <p>Squawking and trail is another character - another controller is tracking them</p>
 	
 	<br>
-<p>leave out un-nessasary words (initially)</p>
 <p>advice higher controller when runway crossing complete (If you are ground)</p>
 	
 	<br>
