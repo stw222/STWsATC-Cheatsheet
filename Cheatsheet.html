@@ -861,6 +861,8 @@
 	<p><b>CTRL + ALT + click aircraft</b> | Draw aircraft's filed route on scope</p>
 	<p><b>CTRL + up or down arrow</b> to change text log size</p>
 	<p><b>CTRL + S</b> silence conflict alert sound</p>
+	<p><b>CTRL + ALT + Numpad 1-9</b> - Saves current display center and soom as bookmark</p>
+	<p><b>CTRL + Numpad 1-9 recalls saved bookmark</b></p>
 
 	<br>
 <p><b>ESC (in scope)</b> clears command line if not empty, else clears radio selected aircraft.</p>
@@ -896,11 +898,18 @@
 	<div class="content">
 	
 	<p><b>.wx</b> or <b>.metar</b> &lt;ICAO&gt;</p>
-	<p><b>.atis</b> for own atis or .atis [callsign] for someone elses</p>
 	<p><b>.transfer &lt;sectorID&gt;</b> to handoff all targets to controller</p>
 	<p><b>.chat nobody</b> - to test commands</p>
 	<p><b>.showstats</b> - Use to show controlling stats from the current session. (Ctrl + up or down to resize text window)</p>
 	<p><b>.recv</b> - are you able to copy voice?</p>
+		
+	<p><b>.vis POINT</b> - Set visibility center (Can also use double right click) .vis1 thru .vis4</p>
+	<p><b>.novis</b> - remove visibility centers</p>
+	<p><b>.showvis</b> - in the name</p>
+	<p><b>.wallop (msg)</b> - tell supervisors about an unruly or NORDO pilot</p>
+	<p><b>.strip &lt;asel&gt;</b> command instead of ALT + clicking on an aircraft</p>
+	<p><b>.acinfo &lt;asel&gt;</b> - info about the selected aircraft</p>
+	<p><b>.typeinfo (aircraft type)</b> - in the name</p>
 	
 	<br>
 	<p id="bad_cruize"><b>.cruzh &lt;lower alt&gt; &lt;higher alt&gt;</b> - (In FL) send a msg to someone about wrong altitude for direction of flight with 2 suggestions</p>
