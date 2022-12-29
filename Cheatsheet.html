@@ -436,6 +436,16 @@
 	<button type="button" class="collapsible">Approach</button>
 	<div class="content">
 		
+		<p><b>GPS approach</b></p>
+		<p>"Cleared Direct (WPT), Cross (WPT) at (ALT), Cleared Rnav GPS X approach"</p>
+		<p><i>*GPS approach; cleared strait in to prevent procedure turn*</i></p>
+		<br>
+		<p><b>LOC Approach</b></p>
+		<p>"(X) Miles from (WPT), Turn (DIR) Heading (HDG), Maintain (ALT) until Established, Cleared LOC approach RWY (X)"</p>
+		<br>
+		<p><b>VOR Approach</b></p>
+		<p><i>*Vector to the VOR with the usual 30 degree or less intercept*</i></p>
+		<p>"Maintain (ALT) until established, Cleared VOR (x) approach"</p>
 		
 		
 		<p><b>VECTOR</b></p>
@@ -494,9 +504,11 @@
 			<li>Direction of hold (Default to right turns)</li>
 			<li>Expect Further Clearance Time</li>
 		</ul>
-		<p>"Cleared to (Fix), Hold (Direction, on the (XXX) Radial, (XX) minute/mile legs, left/right turns, maintain (altitude) expect further clearance (time in zulu)""</p>
+		<p>Published - "HOLD (direction) OF (fix) AS PUBLISHED. MAINTAIN (Altitude) EXPECT FURTHER CLEARANCE (Zulu Time)"</p>
+		<p>Non Published - "(Callsign), Cleared to (fix), hold (direction) on the (XXX) radial, (XX) minute/mile legs, maintain (altitude), expect further clearance (time)."</p>
 		<p>"Cleared to (Airport) via last cleared routing"</p>
 		<p>"Cleared to (Airport) via cross (fix) at/below/above (ALT)"</p>
+		<p>minimum for a hold, where to hold, what altitude, expect further clearance time</p>
 		
 		<br>
 		<p><b>SEPERATION</b></p>
@@ -547,21 +559,22 @@
 		
 		<br>
 		<p><b>UNCONTROLLED FIELDS</b></p>
-		<p>"Cleared to (Airport) via (route), Maintain (Initial), Departure (freq or "With me"), Squawk (Code), Hold for Release, Call me number one for the runway"</p>
+		<p>"Cleared From (Airport), to (Airport) via (route) (or as filed), Maintain (Initial), expect (final) (heading if needed), Departure "With me", Squawk (Code), Hold for Release, Call number one for the runway"</p>
+		<p><i>"Advise what your departure runway and how long until you depart"</i></p>
 		<p>"Released for departure, Clearance Void if not off by (time (In 10 min)). Time now (Time)."</p>
 		<p>"If not off by (Void time), Advise (Freq or "This freq") Not later than (Time (in 15 min)) of intentions"</p>
 		
 		<br>
 		<p>VISUAL</p>
 		<p>"Report the airport in signt"</p>
-		<p>"(Control instructions), Cleared visual approach to (airport name)"</p>
+		<p>"Cleared visual approach to (airport name), Report IFR cancelation in the air or on the ground. Change to advisory freq approved"</p>
 		<p>INSTRUMENT</p>
-		<p>"Cleared (approach) runway (RWY)"</p>
+		<p>"Cleared (approach) runway (RWY). Report established"</p>
 		<p><i>Dont specify RWY for circling approaches</i></p>
 		
 		<br>
 		<p>COMMUNICATION RELEASE</p>
-		<p>"Report Canecllation of IFR, in the air or on the ground, on (Freq (or "This frequency")Change to Advisory frequency approved"</p>
+		<p>"Report Canecllation of IFR, in the air or on the ground, on (Freq (or "This frequency") Change to Advisory frequency approved"</p>
 		<p>If canceling in the air:</p>
 		<p>"IFR cancellation receieved, Squawk VFR, Change to advisory frequency approved"</p>
 		
