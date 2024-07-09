@@ -1,3 +1,5 @@
+# This page is now archived. This is due to information contained here being pretty outdated with many SOP updates and the release of CRC in 2023. I do have some various cheatsheets for CRC and various TRACONs available on [Google Drive](https://drive.google.com/drive/folders/1ob1CTg8-coUqRSqZXCTreGTlQdGgGAnl)
+
 # STWsATC-Cheatsheet
 A cheat sheet for use by the vZID ATC controllers
 
